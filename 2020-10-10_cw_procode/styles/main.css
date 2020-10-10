@@ -1,0 +1,59 @@
+.chess-board {
+    margin: 50px auto;
+    width: 640px;
+    height: 640px;
+    border: 1px solid black;
+}
+
+.row {
+    height: 80px;
+    width: 640px;
+}
+
+.row:nth-child(2n) {
+    background: linear-gradient(to right, black 12.5%, white 12.5% 25%, black 25% 37.5%, white 37.5% 50%, black 50% 62.5%, white 62.5% 75%, black 75% 87.5%, white 87.5%);
+}
+
+.row:nth-child(2n-1) {
+    background: linear-gradient(to right, white 12.5%, black 12.5% 25%, white 25% 37.5%, black 37.5% 50%, white 50% 62.5%, black 62.5% 75%, white 75% 87.5%, black 87.5%);
+}
+
+
+/* Флаг Украины */
+/* div {
+    width: 400px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to bottom, blue 50%, yellow 50%);
+} */
+
+/* div::after {
+    content: "";
+    width: 400px;
+    height: 150px;
+    background-color: blue;
+    position: absolute;
+} */
+
+/* Флаг Италии */
+/* div {
+    width: 400px;
+    height: 300px;
+    margin-top: 50px auto;
+    background: linear-gradient(to right, green 33%, white 33%, white 66%, red 66%);
+} */
+
+/* .main {
+    width: 150px;
+    height: 20px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    background-color: goldenrod;
+    border: 5px solid black;
+}
+
+.main:first-child {
+    background-color: red;
+} */
