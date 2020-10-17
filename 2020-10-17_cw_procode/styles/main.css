@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url(./font/HouschkaPro-Medium.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* html {
+    height: 100%;
+} */
+
+body {
+    background-color: #b9d6ef;
+    font-family: 'Houschka Pro', sans-serif;
+    height: 100%;
+}
+
+.main {
+    margin: 0 auto;
+    height: auto;
+}
+
+.clouds {
+    position: relative;
+    height: 61px;
+    width: 726px;
+    margin: 0 auto;
+}
+
+.clouds > div {
+    position: absolute;
+}
+
+.cloud1 {
+    left: 0;
+}
+
+.cloud2 {
+    right: 0;
+}
+
+.comingsoon {
+    margin-top: 51px;
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: bold;
+    font-size: 72px;
+    text-align: center;
+    color: #fefefe;
+    text-shadow: 4px 4px 0px #9EADC4;
+}
+
+.subscribe {
+    margin-bottom: 22px;
+    font-size: 14px;
+    text-align: center;
+    color: #416594;
+}
+
+.form {
+    margin: 0 auto;
+    width: 353px;
+}
+
+.form > input {
+    height: 37px;
+    width: 240px;
+    font-family: Arial;
+    font-size: 12px;
+    border: none;
+    border-radius: 2px;
+    color: #9E9E9E;
+}
+
+.form > button {
+    margin-left: 10px;
+    border: none;
+    border-radius: 2px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #F2E463, #E8A933);
+    color: #FEFEFE;
+}
+
+.ice-ship {
+    position: relative;
+    margin: 24px auto 0 auto;
+    width: 331px;
+    height: 187px;
+}
+
+.ship {
+    position: absolute;
+    top: 172px;
+    left: -25px;
+} 
+
+.background1 {
+    height: 6px;
+    background-color: #DEE9F8;
+}
+
+.background2 {
+    height: 7px;
+    background-color:#4E76AA;
+}
+
+.background3 {
+    padding-top: 51px;
+    background-color: #416594;
+    height: 100vh;
+}
+
+.info {
+    position: relative;
+    margin: 0 auto;
+    width: 290px;
+}
+
+.info > div {
+    position: absolute;
+}
+
+.circle {
+    position: absolute;
+    display: table;
+    font-size: 24px;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #BED1ED;
+    color: #416594;
+}
+
+.circle > span {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.circle:nth-child(2) {
+    left: 113px;
+}
+
+.circle:nth-child(3) {
+    left: 222px;
+}
+
+.days, .hours, .mins {
+    top: 81px;
+    font-weight: bold;
+    color: #F1F1F1;
+}
+
+.days {
+    left: 14px;
+}
+
+.hours {
+    left: 120px;
+}
+
+.mins {
+    left: 236px;
+}
+
+.hatch{
+    animation-name: hatch;
+    -webkit-animation-name: hatch;
+    
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+ 
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;    
+}
+ 
+@keyframes hatch {
+    0% {
+        transform: rotate(1deg);
+    }
+    20% {
+        transform: rotate(2deg);
+    }
+    35% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(4deg);
+    }   
+    65% {
+        transform: rotate(3deg);
+    }   
+    80% {
+        transform: rotate(2deg);
+    }       
+    100% {
+        transform: rotate(1deg);
+    }                                   
+}
+ 
+@-webkit-keyframes hatch {
+    0% {
+        -webkit-transform: rotate(1deg);
+    }
+    20% {
+        -webkit-transform: rotate(2deg);
+    }
+    35% {
+        -webkit-transform: rotate(3deg);
+    }
+    50% {
+        -webkit-transform: rotate(4deg);
+    }   
+    65% {
+        -webkit-transform: rotate(3deg);
+    }   
+    80% {
+        -webkit-transform: rotate(2deg);
+    }       
+    100% {
+        -webkit-transform: rotate(1deg);
+    }       
+}
