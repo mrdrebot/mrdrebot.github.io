@@ -1,23 +1,16 @@
 @font-face {
     font-family: 'Houschka Pro';
-    src: url(./font/HouschkaPro-Medium.ttf);
-    font-weight: bold;
+    src: url(font/HouschkaPro-Medium.ttf);
     font-style: normal;
 }
 
-/* html {
-    height: 100%;
-} */
-
 body {
-    background-color: #b9d6ef;
     font-family: 'Houschka Pro', sans-serif;
-    height: 100%;
+    background-color: #b9d6ef;
 }
 
 .main {
     margin: 0 auto;
-    height: auto;
 }
 
 .clouds {
@@ -40,14 +33,14 @@ body {
 }
 
 .comingsoon {
+    position: relative;
     margin-top: 51px;
     margin-bottom: 20px;
-    position: relative;
     font-weight: bold;
     font-size: 72px;
     text-align: center;
-    color: #fefefe;
     text-shadow: 4px 4px 0px #9EADC4;
+    color: #fefefe;
 }
 
 .subscribe {
@@ -58,36 +51,38 @@ body {
 }
 
 .form {
-    margin: 0 auto;
     width: 353px;
+    margin: 0 auto;
 }
 
 .form > input {
     height: 37px;
-    width: 240px;
+    width: 228px;
+    padding-left: 12px;
     font-family: Arial;
     font-size: 12px;
     border: none;
     border-radius: 2px;
+    box-shadow: inset 0 2px 3px 0 #DDDCDC;
     color: #9E9E9E;
 }
 
 .form > button {
-    margin-left: 10px;
-    border: none;
-    border-radius: 2px;
     height: 35px;
+    margin-left: 10px;
     font-size: 14px;
     font-weight: bold;
+    border: none;
+    border-radius: 2px;
     background: linear-gradient(to bottom, #F2E463, #E8A933);
     color: #FEFEFE;
 }
 
 .ice-ship {
     position: relative;
-    margin: 24px auto 0 auto;
-    width: 331px;
     height: 187px;
+    width: 331px;
+    margin: 24px auto 0 auto;
 }
 
 .ship {
@@ -107,15 +102,15 @@ body {
 }
 
 .background3 {
+    height: 100vh;
     padding-top: 51px;
     background-color: #416594;
-    height: 100vh;
 }
 
 .info {
     position: relative;
-    margin: 0 auto;
     width: 290px;
+    margin: 0 auto;
 }
 
 .info > div {
@@ -125,10 +120,10 @@ body {
 .circle {
     position: absolute;
     display: table;
-    font-size: 24px;
-    text-align: center;
     height: 70px;
     width: 70px;
+    font-size: 24px;
+    text-align: center;
     border-radius: 50%;
     background-color: #BED1ED;
     color: #416594;
@@ -136,7 +131,7 @@ body {
 
 .circle > span {
     display: table-cell;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 .circle:nth-child(2) {
@@ -162,7 +157,7 @@ body {
 }
 
 .mins {
-    left: 236px;
+    left: 237px;
 }
 
 .hatch{
