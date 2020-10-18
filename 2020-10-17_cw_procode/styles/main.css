@@ -71,13 +71,11 @@ body {
     height: 35px;
     margin-left: 10px;
     font-size: 14px;
-    /* font-weight: bold; */
     text-shadow: 1px 1px 1px #CD9C33;
     border: 1px solid #EAAF30;
     border-radius: 2px;
     background: linear-gradient(to bottom, #EECE4B, #E8A933);
     color: #FEFEFE;
-    /* opacity: 70%; */
 }
 
 .ice-ship {
