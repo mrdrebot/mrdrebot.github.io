@@ -39,7 +39,7 @@ body {
     font-weight: bold;
     font-size: 72px;
     text-align: center;
-    text-shadow: 4px 4px 0px #9EADC4;
+    text-shadow: 2px 4px 0px #9EADC4;
     color: #fefefe;
 }
 
@@ -47,7 +47,7 @@ body {
     margin-bottom: 22px;
     font-size: 14px;
     text-align: center;
-    color: #416594;
+    color: #416594;    
 }
 
 .form {
@@ -71,11 +71,13 @@ body {
     height: 35px;
     margin-left: 10px;
     font-size: 14px;
-    font-weight: bold;
-    border: none;
+    /* font-weight: bold; */
+    text-shadow: 1px 1px 1px #CD9C33;
+    border: 1px solid #EAAF30;
     border-radius: 2px;
-    background: linear-gradient(to bottom, #F2E463, #E8A933);
+    background: linear-gradient(to bottom, #EECE4B, #E8A933);
     color: #FEFEFE;
+    /* opacity: 70%; */
 }
 
 .ice-ship {
