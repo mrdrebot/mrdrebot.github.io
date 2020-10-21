@@ -1,11 +1,5 @@
-@font-face {
-    font-family: 'Houschka Pro';
-    src: url(font/HouschkaPro-Medium.ttf);
-    font-style: normal;
-}
-
 body {
-    font-family: 'Houschka Pro', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: #b9d6ef;
 }
 
@@ -25,40 +19,43 @@ body {
 }
 
 .cloud1 {
-    left: 0;
+    left: 3px;
 }
 
 .cloud2 {
-    right: 0;
+    right: -5px;
 }
 
 .comingsoon {
     position: relative;
-    margin-top: 51px;
-    margin-bottom: 20px;
+    left: 14px;
+    margin-top: 38px;
+    margin-bottom: 8px;
     font-weight: bold;
-    font-size: 72px;
+    font-size: 67px;
     text-align: center;
     text-shadow: 2px 4px 0px #9EADC4;
+    word-spacing: 10px;
+    letter-spacing: 2px;
     color: #fefefe;
 }
 
 .subscribe {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     font-size: 14px;
     text-align: center;
     color: #416594;    
 }
 
 .form {
-    width: 353px;
+    width: 348px;
     margin: 0 auto;
 }
 
 .form > input {
     height: 37px;
     width: 228px;
-    padding-left: 12px;
+    padding-left: 15px;
     font-family: Arial;
     font-size: 12px;
     border: none;
@@ -69,7 +66,7 @@ body {
 
 .form > button {
     height: 35px;
-    margin-left: 10px;
+    margin-left: 7px;
     font-size: 14px;
     text-shadow: 1px 1px 1px #CD9C33;
     border: 1px solid #EAAF30;
@@ -80,9 +77,9 @@ body {
 
 .ice-ship {
     position: relative;
-    height: 187px;
+    height: 184px;
     width: 331px;
-    margin: 24px auto 0 auto;
+    margin: 21px auto 0 auto;
 }
 
 .ship {
@@ -111,6 +108,7 @@ body {
     position: relative;
     width: 290px;
     margin: 0 auto;
+    padding-top: 6px;
 }
 
 .info > div {
@@ -144,20 +142,22 @@ body {
 
 .days, .hours, .mins {
     top: 81px;
+    font-size: 20px;
     font-weight: bold;
+    letter-spacing: 2px;
     color: #F1F1F1;
 }
 
 .days {
-    left: 14px;
+    left: 6px;
 }
 
 .hours {
-    left: 120px;
+    left: 107px;
 }
 
 .mins {
-    left: 237px;
+    left: 227px;
 }
 
 .hatch{
