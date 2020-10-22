@@ -1,5 +1,5 @@
 .main {
-    margin: 20px 50px;
+    margin: 50px 50px;
     position: relative;
 }
 
@@ -7,27 +7,51 @@
     position: absolute;
     border: 2px solid black;
     background-color: khaki;
-    width: 60px;
+    width: 66px;
     height: 100px;
     border-radius: 5px;
 }
 
-.item2 {
-    z-index: 0;
+.hidden {
+    opacity: 0;
+    top: -2px;
+    right: -2px;
+}
+
+.item:first-child {
+    background-image: url("../images/Screenshot_5_1.jpg");
+    background-size: contain;
+}
+
+.item:nth-child(2) {
     left: 50px;
+    background-image: url("../images/Screenshot_5_2.jpg");
+    background-size: contain;
 }
 
-.item3 {
+.item:nth-child(3) {
     left: 100px;
+    background-image: url("../images/Screenshot_5_3.jpg");
+    background-size: contain;
 }
 
-.item4 {
+.item:nth-child(4) {
     left: 150px;
+    background-image: url("../images/Screenshot_5_4.jpg");
+    background-size: contain;
 }
 
-.item:hover {
-    font-size: 0;
-    top: -10px;
+.visible:hover > .hidden {
+    right: -2px;
+    opacity: 100;
+    top: -25px;
     z-index: 1;
-    background: content-box radial-gradient(crimson, skyblue);
+    background-image: url("../images/cardback.png");
+    background-size: contain;
+}
+
+.visible:hover {
+    border: 2px solid transparent;
+    background-color: transparent;
+    background-image: none;
 }
