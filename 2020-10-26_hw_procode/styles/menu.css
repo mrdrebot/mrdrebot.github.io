@@ -23,7 +23,6 @@ header {
     align-items: center;
     height: inherit;
     width: inherit;
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04); */
 }
 
 .menu > div {
@@ -118,7 +117,7 @@ header {
 }
 
 .menu > div:last-child > span::after {
-    content: url("/images/Group2.1.svg");
+    content: url("../images/Group2.1.svg");
     position: relative;
     top: 2px;
     left: 8px;
