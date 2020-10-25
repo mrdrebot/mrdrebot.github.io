@@ -1,0 +1,158 @@
+.container-2 {
+    margin-top: 41px;
+    height: 740px;
+    width: inherit;
+}
+
+.container-2 > .row-1 {
+    height: 74px;
+    margin-left: 37px;
+}
+
+.block-1 {
+    display: inline-block;
+    width: 101px;
+}
+
+.block-1 > div:first-child {
+    margin-left: 11px;
+    font-size: 25px;
+}
+
+.block-1 > div:first-child::before {
+    content: url(/images/bitcoin-small.svg);
+    position: relative;
+    top: 1px;
+    left: -10px;
+    height: 14px;
+    width: 14px;
+}
+
+.block-1 > div:last-child {
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #828282;
+}
+
+.block {
+    display: inline-block;
+    width: 108px;
+    margin-left: 28px;
+}
+
+.block > div:first-child {
+    font-weight: 500;
+    color: #828282;
+}
+
+.block > div:last-child {
+    margin-top: 9px;
+    margin-left: 6px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.block > div:last-child::before {
+    position: relative;
+    top: -6px;
+    left: -8px;
+    height: 6px;
+    width: 6px;
+}
+
+.block > div:last-child > span {
+    font-size: 12px;
+}
+
+.block-2 > div:last-child::before {
+    content: url(/images/Ellipse-green.svg);
+}
+
+.block-3 > div:last-child::before {
+    content: url(/images/Ellipse.svg);
+    left: -5px;
+}
+
+.block-4 > div:last-child::before {
+    content: url(/images/Ellipse-orange.svg);
+    left: -5px;
+}
+
+/* START CONTAINER-2 ROW-2 */
+
+.container-2 .row-2 {
+    height: 343px;
+    margin-left: 37px;
+}
+
+.container-2 .row-2 .column {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.container-2 .row-2 .column .heading {
+    margin-top: 2px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #828282;
+}
+
+.diagram {
+    height: 289px;
+    width: 915px;
+    margin-top: 7px;
+    background: url(../images/diagram.png);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+}
+
+.container-2 .row-2 .column:last-child {
+    margin-left: 20px;
+}
+
+.dd-mm-yy {
+    height: 289px;
+    width: 303px;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+}
+
+.dd-mm-yy > div {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.dd-mm-yy > div:nth-child(2n-1) {
+    font-size: 14px;
+    color: #BDBDBD;
+}
+
+.dd-mm-yy > div:nth-child(2n) {
+    margin-top: 7px;
+    margin-left: 28px;
+    font-size: 18px;
+    color: #4F4F4F;
+}
+
+.dd-mm-yy > div:nth-child(2n)::before {
+    content: url(/images/Ellipse-dark-blue.svg);
+    position: relative;
+    top: -4px;
+    left: -7px;
+    height: 5px;
+    width: 5px;
+}
+
+.dd-mm-yy > div:nth-child(2n+1) {
+    margin-top: 18px;
+}
+
+.dd-mm-yy > div:nth-child(1) {
+    margin-top: 23px;
+}
+
+/* START CONTAINER-2 ROW-3 */
+

@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 1149px;
+    width: 1316px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+header {
+    height: 89px;
+    background-color: #FFFFFF;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    width: inherit;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04); */
+}
+
+.menu > div {
+    height: 49px;
+    width: 213px;
+    margin-left: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 16px;
+    border: 1px solid #DBDBDB;;
+    border-radius: 5px;
+}
+
+.menu > div:first-child {
+    color: #FFFFFF;
+    background: linear-gradient(to right,  #255390, #162970);
+}
+.menu > div > span {
+    display: inline-block;
+}
+
+.menu > div:first-child > span {
+    margin-top: 14px;
+    margin-left: 9px;
+}
+
+.menu > div:first-child > span::before {
+    content: url("../images/speed-meter.svg");
+    position: relative;
+    top: 2px;
+    right: 12px;
+    width: 23px;
+    height: 15px;
+}
+
+.menu > div:nth-child(2) > span {
+    margin-top: 10px;
+    margin-left: 13px;
+}
+
+.menu > div:nth-child(2) > span::before {
+    content: url("../images/profile-user.svg");
+    position: relative;
+    top: 5px;
+    right: 12px;
+    width: 19px;
+    height: 19px;
+}
+
+.menu > div:nth-child(3) > span {
+    margin-top: 9px;
+    margin-left: 15px;
+}
+
+.menu > div:nth-child(3) > span::before {
+    content: url("../images/settings-work-tool.svg");
+    position: relative;
+    top: 5px;
+    right: 14px;
+    width: 21px;
+    height: 21px;
+}
+
+.menu > div:nth-child(4) {
+    margin-right: 113px;
+}
+
+.menu > div:nth-child(4) > span {
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+.menu > div:nth-child(4) > span::before {
+    content: url("../images/info.svg");
+    position: relative;
+    top: 6px;
+    right: 12px;
+    width: 21px;
+    height: 21px;
+}
+
+#sign-in {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-left: 0;
+    border: none;
+}
+
+.menu > div:last-child > span {
+    margin-left: 10px;
+}
+
+.menu > div:last-child > span::after {
+    content: url("/images/Group2.1.svg");
+    position: relative;
+    top: 2px;
+    left: 8px;
+    width: 12px;
+    height: 12px;
+}
