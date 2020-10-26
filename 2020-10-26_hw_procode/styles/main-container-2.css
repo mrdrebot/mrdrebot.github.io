@@ -5,7 +5,7 @@
 }
 
 .container-2 > .row-1 {
-    height: 74px;
+    height: 76px;
     margin-left: 37px;
 }
 
@@ -82,17 +82,16 @@
 /* START CONTAINER-2 ROW-2 */
 
 .container-2 .row-2 {
-    height: 343px;
+    height: 339px;
     margin-left: 37px;
 }
 
-.container-2 .row-2 .column {
+.column {
     display: inline-block;
     vertical-align: top;
 }
 
-.container-2 .row-2 .column .heading {
-    margin-top: 2px;
+.heading {
     font-size: 15px;
     font-weight: 400;
     color: #828282;
@@ -106,7 +105,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
 }
 
-.container-2 .row-2 .column:last-child {
+.column:last-child {
     margin-left: 20px;
 }
 
@@ -156,3 +155,82 @@
 
 /* START CONTAINER-2 ROW-3 */
 
+.row-3 {
+    height: 220px;
+    margin-left: 38px;
+}
+
+.row-3 > .column:first-child > div:last-child {
+    height: 193px;
+    width: 916px;
+    margin-top: 10px;
+    background-color: #FFFFFF;
+}
+
+.custom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 66px;
+    width: 303px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+}
+
+.custom > span {
+    font-weight: 500;
+}
+
+.custom > span:nth-child(2n-1) {
+    width: 78px;
+    margin-left: 12px;
+    text-align: left;
+}
+
+.custom > span:nth-child(2n) {
+    width: 151px;
+    margin-right: 12px;
+    text-align: right;
+}
+
+.custom > span:first-child, .custom > span:nth-child(2) {
+    font-size: 15px;
+    font-weight: bold;
+    color: #4F4F4F;
+}
+
+.custom > span:nth-child(3), .custom > span:last-child, .show {
+    font-size: 13px;
+}
+
+.custom > span:nth-child(3) {
+    color: #219653;
+}
+
+.custom:nth-child(3) > span:nth-child(3) {
+    color: #F2994A;
+}
+
+.show {
+    height: 33px;
+    width: 187px;
+    margin-top: 13px;
+    margin-left: 52px;
+    font-weight: 400;
+    border: 0.5px solid #E0E0E0;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    color: #4F4F4F;
+}
+
+.show::before {
+    content: url(../images/dots.svg);
+    position: relative;
+    top: -4px;
+    left: -7px;
+    height: 2px;
+    width: 10px;
+}
