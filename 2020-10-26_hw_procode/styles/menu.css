@@ -25,31 +25,32 @@ header {
     width: inherit;
 }
 
-.menu > div {
+.menu > button {
     height: 49px;
     width: 213px;
-    margin-left: 40px;
+    margin-right: 42px;
     font-weight: bold;
     text-align: center;
-    line-height: 16px;
+    line-height: 27px;
     border: 1px solid #DBDBDB;;
     border-radius: 5px;
+    background: #FFFFFF;
 }
 
-.menu > div:first-child {
+.menu > button:first-child {
+    margin-left: 40px;
     color: #FFFFFF;
     background: linear-gradient(to right,  #255390, #162970);
 }
-.menu > div > span {
+.menu > button > span {
     display: inline-block;
 }
 
-.menu > div:first-child > span {
-    margin-top: 14px;
+.menu > button:first-child > span {
     margin-left: 9px;
 }
 
-.menu > div:first-child > span::before {
+.menu > button:first-child > span::before {
     content: url("../images/speed-meter.svg");
     position: relative;
     top: 2px;
@@ -58,12 +59,11 @@ header {
     height: 15px;
 }
 
-.menu > div:nth-child(2) > span {
-    margin-top: 10px;
-    margin-left: 13px;
+.menu > button:nth-child(2) > span {
+    margin-left: 19px;
 }
 
-.menu > div:nth-child(2) > span::before {
+.menu > button:nth-child(2) > span::before {
     content: url("../images/profile-user.svg");
     position: relative;
     top: 5px;
@@ -72,12 +72,11 @@ header {
     height: 19px;
 }
 
-.menu > div:nth-child(3) > span {
-    margin-top: 9px;
+.menu > button:nth-child(3) > span {
     margin-left: 15px;
 }
 
-.menu > div:nth-child(3) > span::before {
+.menu > button:nth-child(3) > span::before {
     content: url("../images/settings-work-tool.svg");
     position: relative;
     top: 5px;
@@ -86,16 +85,15 @@ header {
     height: 21px;
 }
 
-.menu > div:nth-child(4) {
-    margin-right: 113px;
+.menu > button:nth-child(4) {
+    margin-right: 115px;
 }
 
-.menu > div:nth-child(4) > span {
-    margin-top: 8px;
+.menu > button:nth-child(4) > span {
     margin-left: 15px;
 }
 
-.menu > div:nth-child(4) > span::before {
+.menu > button:nth-child(4) > span::before {
     content: url("../images/info.svg");
     position: relative;
     top: 6px;
@@ -112,15 +110,15 @@ header {
     border: none;
 }
 
-.menu > div:last-child > span {
-    margin-left: 10px;
+.menu > div > span {
+    margin-left: 15px;
 }
 
-.menu > div:last-child > span::after {
+.menu > div > span::after {
     content: url("../images/Group2.1.svg");
     position: relative;
     top: 2px;
-    left: 8px;
+    left: 6px;
     width: 12px;
     height: 12px;
 }

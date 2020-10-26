@@ -6,6 +6,7 @@ main {
 
 .container-1 .row-1 {
     height: 90px;
+    overflow: hidden;
 }
 
 .text, .cost {
@@ -51,11 +52,6 @@ main {
     border-radius: 20px;
     background: linear-gradient(to right,  #255390, #162970);
     box-shadow: 0px 8px 10px rgba(60, 84, 117, 0.15);
-}
-
-.add > span {
-    display: inline-block;
-    margin-top: 5px;
 }
 
 .add > span::before {
@@ -306,16 +302,17 @@ main {
     box-shadow: none;
 }
 
-.type-2:nth-child(5) > div {
+.type-2:nth-child(5) > button {
     display: inline-block;
     height: inherit;
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+    vertical-align: baseline;
 }
 
-.type-2:nth-child(5) > div:first-child {
-    height: 32px;
-    width: 139px;
+.type-2:nth-child(5) > button:first-child {
+    height: inherit;
+    width: 144px;
     margin-right: 7px;
     border: 2px solid #F3BA2F;
     background: url(../images/binance.svg);
@@ -324,9 +321,10 @@ main {
     background-position: center;
 }
 
-.type-2:nth-child(5) > div:last-child {
+.type-2:nth-child(5) > button:last-child {
     height: inherit;
     width: 136px;
+    border: none;
     background: url(../images/buy.svg);
     background-color: #00D56E;
     background-repeat: no-repeat;

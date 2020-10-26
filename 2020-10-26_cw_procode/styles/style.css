@@ -1,0 +1,32 @@
+.container {
+    height: 550px;
+    width: 550px;
+    background-color: #FFEBCD;
+}
+
+.row-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    height: inherit;
+}
+
+.row-1 > div {
+    width: 50px;
+    margin: 25px 50px;
+    background-color: #808080;
+    border-radius: 5px;
+}
+
+.row-1 > div:nth-child(3) {
+    height: 150px;
+}
+
+.row-1 > div:nth-child(4) {
+    width: 300px;
+}
+
+.row-1 > div:nth-child(5) {
+    height: 50px;
+}
