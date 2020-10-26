@@ -4,29 +4,33 @@
     background-color: #FFEBCD;
 }
 
-.row-1 {
+.row {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
     flex-wrap: wrap;
     height: inherit;
+    color: white;
 }
 
-.row-1 > div {
+.row > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     margin: 25px 50px;
     background-color: #808080;
     border-radius: 5px;
 }
 
-.row-1 > div:nth-child(3) {
+.row > div:nth-child(3) {
     height: 150px;
 }
 
-.row-1 > div:nth-child(4) {
+.row > div:nth-child(4) {
     width: 300px;
 }
 
-.row-1 > div:nth-child(5) {
+.row > div:nth-child(5) {
     height: 50px;
 }
