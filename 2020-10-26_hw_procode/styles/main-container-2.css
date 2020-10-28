@@ -167,6 +167,125 @@
     background-color: #FFFFFF;
 }
 
+.choose-contract {
+    overflow: hidden;
+    border-radius: 5px;
+    color: #4F4F4F;
+}
+
+.choose-contract > div {
+    margin-left: 24px;
+}
+
+.choose-contract > div:first-child {
+    margin-top: 26px;;
+}
+
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.contract {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    width: 173px;
+    padding-left: 21px;
+    padding-right: 22px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0.5px solid #E0E0E0;
+    border-radius: 22.5px;
+    background-color: #F6F7FB;
+}
+
+.contract::after {
+    content: url(../images/check.svg);
+    position: relative;
+    top: -7px;
+    height: 6px;
+    width: 14px;
+}
+
+.slider-container {
+    position: relative;
+}
+
+#range {
+    width: 612px;
+    margin-top: 23px;
+    margin-left: 30px;
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: 0px 8px 10px rgba(60, 84, 117, 0.15);
+}
+
+#range::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 1.5px;
+    height: 3px;
+    background: linear-gradient(to right, #F2AE4B 24%, #162A71 24%, #162A71 62%, #E5E5F3 62%);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03); */
+}
+
+#range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    top: -9px;
+    width: 21px;
+    height: 21px;
+    background: #162A71;
+    border-radius: 50%;
+}
+
+.slider-value {
+    position: absolute;
+    top: -21px;
+    right: 186px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #162A71;
+}
+
+.down-row {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.down-row > span {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.down-row:nth-child(3) {
+    width: 248px;
+    margin-right: 20px;
+}
+
+.down-row:nth-child(4) {
+    width: 153px;
+    margin-right: 23px;
+}
+
+.down-row:nth-child(5) {
+    width: 179px;
+}
+
+.column-container > button {
+    height: 40px;
+    width: 180px;
+    margin-top: 18px;
+    margin-left: 55px;
+    border-radius: 20px;
+    background-color: #255390;
+    color: #FFFFFF;
+}
+
 .custom {
     display: flex;
     justify-content: space-between;
