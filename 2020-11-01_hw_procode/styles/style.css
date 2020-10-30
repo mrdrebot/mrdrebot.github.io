@@ -17,7 +17,7 @@
 }
 
 .timer {
-    width: 221px;
+    width: 220px;
     margin-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -32,7 +32,7 @@
 button {
     position: relative;
     height: 20px;
-    width: 161px;
+    width: 160px;
     margin-left: 10px;
     font-family: "fontello";
     font-size: 15px;
