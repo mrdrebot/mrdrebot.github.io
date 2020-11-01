@@ -1,0 +1,194 @@
+.container {
+    position: relative;
+    height: 940px;
+    width: 1920px;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+}
+
+header {
+    position: absolute;
+    top: 55px;
+    left: 44px;
+}
+
+nav {
+    height: 50px;
+    width: 50px;
+    background-color: #2F2D2E;
+    border: 1px solid #939393;
+    border-radius: 50%;
+    background-image: url(../icons/three_lines.png);
+    background-repeat: no-repeat;
+    background-position: 10px 14px;
+}
+
+header > img {
+    margin-top: 23px;
+    margin-left: 6px;
+}
+
+.text {
+    font-family: 'DINNextLTPro-Light', sans-serif;
+    font-size: 14px;
+    color: #9E9290;
+}
+
+header > .text {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 6px;
+}
+
+header > .text::before {
+    content: url(../icons/line_vert.png);
+    position: absolute;
+    top: -4px;
+    left: -50px;
+    height: 2px;
+    width: 30px;
+}
+
+section {
+    position: absolute;
+    left: 50px;
+    bottom: 52px;
+}
+
+section > .text {
+    position: relative;
+    top: 4px;
+    left: 13px;
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+}
+
+.facebook-share, .twitter-share, .share {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+}
+
+.facebook-share {
+    margin-bottom: 10px;
+    background-image: url(../icons/facebook.png);
+}
+
+.twitter-share {
+    margin-bottom: 10px;
+    background-image: url(../icons/twiter.png);
+}
+
+.share {
+    background-image: url(../icons/dowmload.png);
+}
+
+.trailer {
+    position: absolute;
+    right: 96px;
+    bottom: 42px;
+    height: 118px;
+    border: 1px solid #DE9701;
+}
+
+.trailer > a {
+    position: relative;
+    height: 118px;
+}
+
+.trailer > a::before {
+    content: url(../icons/line_vert_long.png);
+    position: absolute;
+    top: -16px;
+    left: -46px;
+}
+
+footer {
+    position: relative;
+    float: right;
+    height: 920px;
+    width: 58px;
+    margin: 10px 10px 10px 0;
+    border-left: 1px solid #2F2D2E;
+}
+
+.up {
+    margin-top: 43px;
+    margin-left: 19px;
+}
+
+.up > a > div {
+    height: 21px;
+    width: 18px;
+    background-repeat: no-repeat;
+}
+
+.facebook > div {
+    background-image: url(../icons/facebook_small.png);
+    background-position: 4px 0;
+}
+
+.twitter, .instagram {
+    display: block;
+    margin-top: 25px;
+}
+
+.twitter > div {
+    background-image: url(../icons/twiter_small.png);
+}
+
+.instagram > div {
+    background-image: url(../icons/instagram.png);
+}
+
+.up > .text {
+    position: relative;
+    top: 150px;
+    left: 2px;
+    width: 127px;
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+}
+
+.bottom {
+    position: absolute;
+    left: 12px;
+    bottom: 0;
+}
+
+.bottom > a > .same {
+    height: 34px;
+    width: 33px;
+    background-repeat: no-repeat;
+}
+
+.wb {
+    display: block;
+    margin-bottom: 21px;
+}
+
+.wb > div {
+    background-image: url(../icons/WB.png);
+}
+
+.legendary {
+    display: block;
+    margin-bottom: 157px;
+}
+
+.legendary > div {
+    background-image: url(../icons/gate.png);
+}
+
+.bottom > .text {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    width: 164px;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+}
