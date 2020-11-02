@@ -18,8 +18,8 @@ img {
     border-radius: inherit;
     transform: inherit;
     transition: top 0s ease 1s,
-                border 0s ease 2s, border-radius 0s ease 3s,
-                transform  0s ease 4s;
+                border 1s ease 2s, border-radius 2s ease 3s,
+                transform  3s ease 4s;
 }
 
 .main:hover > img {
