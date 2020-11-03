@@ -1,0 +1,56 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    height: 250px;
+    width: auto;
+    margin: 50px auto;
+    background-color: white;
+    transform: translate(-50%, -50%);
+}
+
+.books {
+    position: relative;
+    width: 67px;
+    border: 3px solid black;
+}
+
+.books:nth-child(n+1) {
+    border-left: none;
+}
+
+.books:first-child {
+    border-left: 3px solid black;
+}
+
+.container > div > p {
+    display: none;
+}
+
+.books > h2 {
+    position: absolute;
+    left: 19px;
+    bottom: -18px;
+    height: 27px;
+    width: 230px;
+    margin:0;
+    transform-origin: left top;
+    transform: rotate(-90deg);
+}
+
+.books:hover > p {
+    display: inherit;
+    text-align: center;
+}
+
+.books:hover {
+    width: 230px;
+}
+
+.books:hover > h2 {
+    position: static;
+    height: 27px;
+    width: auto;
+    transform: none;
+}
