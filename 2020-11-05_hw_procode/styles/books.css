@@ -14,6 +14,7 @@
     position: relative;
     width: 67px;
     border: 3px solid black;
+    transition: width .2s ease-in-out 0s;
 }
 
 .books:nth-child(n+1) {
@@ -26,6 +27,7 @@
 
 .container > div > p {
     display: none;
+    transition: display 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .books > h2 {
@@ -34,9 +36,13 @@
     bottom: -18px;
     height: 27px;
     width: 230px;
-    margin:0;
+    margin: 0;
     transform-origin: left top;
     transform: rotate(-90deg);
+    transition: position 1s ease,
+                height 2s ease-in-out,
+                width 2s ease,
+                transform .5s ease;
 }
 
 .books:hover > p {
