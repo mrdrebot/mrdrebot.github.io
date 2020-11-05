@@ -24,5 +24,5 @@ img {
 
 img {
     transform-origin: 5px 175px;
-    animation: move_sec_arrow 60s linear 1s infinite;
+    animation: move_sec_arrow 60s steps(60, start) 1s infinite;
 }
