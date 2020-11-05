@@ -1,0 +1,135 @@
+@keyframes jump {
+    0% {
+        left: 5px;
+        bottom: 20px;
+    }
+
+    10% {
+        left: 80px;
+        bottom: 40px;
+    }
+
+    20% {
+        left: 155px;
+        bottom: 60px;
+    }
+
+    30% {
+        left: 230px;
+        bottom: 80px;
+    }
+
+    40% {
+        left: 305px;
+        bottom: 100px;
+    }
+
+    50% {
+        left: 305px;
+        bottom: 20px;
+    }
+    
+    60% {
+        left: 230px;
+        bottom: 40px;
+    }
+
+    70% {
+        left: 155px;
+        bottom: 60px;
+    }
+
+    80% {
+        left: 80px;
+        bottom: 80px;
+    }
+
+    90% {
+        left: 5px;
+        bottom: 100px;
+    }
+
+    100% {
+        left: 5px;
+        bottom: 20px;
+    }
+}
+
+body {
+    background-color: bisque;
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px;
+    width: 350px;
+    margin: 50px auto;
+    background-color: white;
+}
+
+div {
+    width: 50px;
+    background-color: burlywood;
+}
+
+.ball {
+    position: absolute;
+    left: 5px;
+    bottom: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: crimson;
+    animation: jump 10s step-start 0s infinite normal forwards;
+}
+
+@keyframes height-change-1 {
+    0% {height: 20px;}
+    50% {height: 100px;}
+    100% {height: 20px;}
+}
+
+.step-1 {
+    height: 20px;
+    animation: height-change-1 10s step-start 3.5s infinite normal forwards;
+}
+
+@keyframes height-change-2 {
+    0% {height: 40px;}
+    50% {height: 80px;}
+    100% {height: 40px;}
+}
+
+.step-2 {
+    height: 40px;
+    animation: height-change-2 10s step-start 3.5s infinite normal forwards;
+}
+
+.step-3 {
+    height: 60px;
+}
+
+@keyframes height-change-4 {
+    0% {height: 80px;}
+    50% {height: 40px;}
+    100% {height: 80px;}
+}
+
+.step-4 {
+    height: 80px;
+    animation: height-change-4 10s step-start 3.5s infinite normal forwards;
+}
+
+@keyframes height-change-5 {
+    0% {height: 100px;}
+    50% {height: 20px;}
+    100% {height: 100px;}
+}
+
+.step-5 {
+    height: 100px;
+    animation: height-change-5 10s step-start 3.5s infinite normal forwards;
+}
