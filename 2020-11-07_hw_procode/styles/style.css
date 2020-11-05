@@ -4,19 +4,40 @@
         bottom: 20px;
     }
 
+    5% {
+        left: 40px;
+        bottom: 60px;
+    }
+
     10% {
         left: 80px;
         bottom: 40px;
     }
+
+    15% {
+        left: 114px;
+        bottom: 80px;
+    }
+
 
     20% {
         left: 155px;
         bottom: 60px;
     }
 
+    25% {
+        left: 190px;
+        bottom: 100px;
+    }
+
     30% {
         left: 230px;
         bottom: 80px;
+    }
+
+    35% {
+        left: 265px;
+        bottom: 120px;
     }
 
     40% {
@@ -28,10 +49,20 @@
         left: 305px;
         bottom: 20px;
     }
+
+    55% {
+        left: 265px;
+        bottom: 60px;
+    }
     
     60% {
         left: 230px;
         bottom: 40px;
+    }
+
+    65% {
+        left: 190px;
+        bottom: 80px;
     }
 
     70% {
@@ -39,9 +70,19 @@
         bottom: 60px;
     }
 
+    75% {
+        left: 114px;
+        bottom: 100px;
+    }
+
     80% {
         left: 80px;
         bottom: 80px;
+    }
+
+    85% {
+        left: 40px;
+        bottom: 120px;
     }
 
     90% {
@@ -56,7 +97,9 @@
 }
 
 body {
-    background-color: bisque;
+    background-image: url(../images/1280px-VTB_Arena4.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 main {
@@ -67,13 +110,21 @@ main {
     height: 200px;
     width: 350px;
     margin: 50px auto;
-    background-color: white;
+    background-image: url(../images/grass.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 div {
     width: 50px;
-    background-color: burlywood;
+    /* background-color: burlywood; */
 }
+
+.step {
+    background-image: url(../images/column.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+} 
 
 .ball {
     position: absolute;
@@ -82,8 +133,10 @@ div {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    background-color: crimson;
-    animation: jump 10s step-start 0s infinite normal forwards;
+    background-color: transparent;
+    background-image: url(../images/ball.png);
+    background-size: 100%;
+    animation: jump 10s linear 0s infinite normal forwards;
 }
 
 @keyframes height-change-1 {
@@ -94,7 +147,7 @@ div {
 
 .step-1 {
     height: 20px;
-    animation: height-change-1 10s step-start 3.5s infinite normal forwards;
+    animation: height-change-1 10s step-start 4.05s infinite normal forwards;
 }
 
 @keyframes height-change-2 {
@@ -105,7 +158,7 @@ div {
 
 .step-2 {
     height: 40px;
-    animation: height-change-2 10s step-start 3.5s infinite normal forwards;
+    animation: height-change-2 10s step-start  4.05s infinite normal forwards;
 }
 
 .step-3 {
@@ -120,7 +173,7 @@ div {
 
 .step-4 {
     height: 80px;
-    animation: height-change-4 10s step-start 3.5s infinite normal forwards;
+    animation: height-change-4 10s step-start  4.05s infinite normal forwards;
 }
 
 @keyframes height-change-5 {
@@ -131,5 +184,5 @@ div {
 
 .step-5 {
     height: 100px;
-    animation: height-change-5 10s step-start 3.5s infinite normal forwards;
+    animation: height-change-5 10s step-start  4.05s infinite normal forwards;
 }
