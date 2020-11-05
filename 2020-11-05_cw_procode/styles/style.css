@@ -1,0 +1,28 @@
+body {
+    background-color: bisque;
+}
+
+.clock {
+    position: relative;
+    height: 435px;
+    width: 435px;
+    margin: 50px auto;
+    background-image: url(../images/22.png);
+}
+
+img {
+    position: absolute;
+    height: 217px;
+    top: 40px;
+    left: 212px;
+}
+
+@keyframes move_sec_arrow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+img {
+    transform-origin: 5px 175px;
+    animation: move_sec_arrow 60s linear 1s infinite;
+}

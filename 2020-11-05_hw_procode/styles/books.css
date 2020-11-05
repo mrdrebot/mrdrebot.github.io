@@ -14,7 +14,7 @@
     position: relative;
     width: 67px;
     border: 3px solid black;
-    transition: width .2s ease-in-out 0s;
+    transition: width .3s ease-in-out;
 }
 
 .books:nth-child(n+1) {
