@@ -1,0 +1,43 @@
+.drop-fall {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin: 0px auto;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.drop-fall::before {
+    content: url(../images/drop.png);
+    position: absolute;
+    top: 0;
+    left: 43.5%;
+    height: 80px;
+    width: 50px;
+    animation: drop-fall 5s ease-in infinite;
+    overflow: hidden;
+}
+
+.circles {
+    position: relative;
+    top: -100px;
+    height: 100px;
+    width: 400px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.circle {
+    height: 0;
+    width: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.circle-1 {
+    animation: circle-diverge-1 5s linear 5s infinite;
+}
+
+.circle-2 {
+    animation: circle-diverge-2 5s linear 5s infinite;
+}
