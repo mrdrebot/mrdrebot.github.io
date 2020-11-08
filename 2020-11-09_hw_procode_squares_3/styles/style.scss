@@ -1,21 +1,69 @@
-$squere_side: 50px;
-$row_namber: 6;
-$column_number: 8;
+$square_side: 50px;
+$row_namber: 5;
+$column_number: 3;
+
+%square {
+    content: "";
+    height: $square_side;
+    width: $square_side;
+    margin: 10px;
+    background-color: yellow;
+}
+
+$square_number: $row_namber * $column_number;
+
+
+// @for $i from 1 through $square_number {
+//     main::before {
+//     // main::before:nth-child(#{$i}) {
+//     // div:nth-child(#{$i}) {
+//         @extend %square;
+//     }
+// }
+
 
 main {
     display: flex;
     flex-wrap: wrap;
-    width: ($squere_side * $column_number) + (10px * $column_number * 2);
-    height: ($squere_side * $row_namber) + (10px * $row_namber * 2);
+    width: ($square_side * $column_number) + (10px * $column_number * 2);
+    height: ($square_side * $row_namber) + (10px * $row_namber * 2);
     margin: 50px auto;
     border: 1px solid red;
     background-color: white;
-    overflow: hidden;
+    background-image: url(../images/square.png);
+    // overflow: hidden;
 
-    div {
-        height: $squere_side;
-        width: $squere_side;
-        margin: 10px;
-        background-color: yellow;
-    }
+    // @for $i from 1 through $square_number {
+    //         main::before {
+    //         // main::before:nth-child(#{$i}) {
+    //         // div:nth-child(#{$i}) {
+    //             @extend %square;
+    //         }
+    //     }
+        
+
+    // &::after {
+    //     content: "";
+    //     height: $square_side;
+    //     width: $square_side;
+    //     margin: 10px;
+    //     background-color: red;
+    // }
+
+    // div {
+    //     height: $square_side;
+    //     width: $square_side;
+    //     margin: 10px;
+    //     background-color: yellow;
+
+    //     &::after {
+    //         content: "";
+    //         height: $square_side;
+    //         width: $square_side;
+    //         margin: 10px;
+    //         background-color: red;
+    //     }
+    // }
+
+    
 }
