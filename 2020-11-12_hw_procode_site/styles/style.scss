@@ -1,0 +1,123 @@
+
+// 1-ROW
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 60%;
+    min-width: 240px;
+    background-color: blueviolet;
+}
+
+.about-scss {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 40%;
+    min-width: 160px;
+    background-color: red;
+}
+
+// 2-ROW
+
+//PART-1
+
+.container-1 {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.container-1 > div {
+    height: 40%;
+    width: 40%;
+    margin: 5%;
+    background-color: khaki;
+}
+
+.container-1 > .lorem-4 {
+    margin-top: 40px;
+}
+
+.container-1 > .lorem-5, .container-1 > .lorem-7 {
+    margin-top: -20px;
+}
+
+//PART-2
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-2 > div {
+    width: 60%;
+    margin: 2%;
+    background-color: lawngreen;
+}
+
+.container-2 > .lorem-img-1 {
+    align-self: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 280px;
+}
+
+.container-2 > .lorem-img-2 {
+    align-self: flex-end;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 280px;
+}
+
+//INFINITE-SCROLL
+
+.infinite-scroll {
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.infinite-scroll span {
+    display: inline-block;
+    width: 100%;
+    text-indent: 0;
+    animation: infinite-scroll 10s linear infinite;
+}
+
+@keyframes infinite-scroll {
+
+0%  { transform: translate(-100%, 0); }
+
+100% { transform: translate(100%, 0); }
+}
+
+//two-div
+
+.two-div {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.lorem-1 {
+    flex-grow: 1;
+    // flex-shrink: 0.7;
+    height: 80%;
+    width: 50%;
+    min-width: 200px;
+    background-color: blueviolet;
+}
+
+.lorem-2 {
+    flex-grow: 1;
+    // flex-shrink: 1;
+    height: 80%;
+    width: 50%;
+    min-width: 200px;
+    background-color: red;
+}

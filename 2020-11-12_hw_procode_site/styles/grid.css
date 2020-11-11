@@ -1,0 +1,68 @@
+.common-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (10vw)[8];
+      grid-template-columns: repeat(8, 10vw);
+  -ms-grid-rows: 11.5% 32% 18.5% 4.5% 22% 11.5%;
+      grid-template-rows: 11.5% 32% 18.5% 4.5% 22% 11.5%;
+      grid-template-areas: "hd hd hd hd hd hd hd hd" "as as c2 c2 c2 c2 c2 c2" "as as fl fl fl fl fl fl" "is is is is is is is is" "td td td td td td td td" "hl hl hl hl hl hl hl hl";
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-area: hd;
+}
+
+aside {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: as;
+}
+
+.container-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-area: c2;
+}
+
+.flowers {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-area: fl;
+}
+
+.infinite-scroll {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-area: is;
+}
+
+.two-div {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-area: td;
+}
+
+footer {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-area: hl;
+}
+
+header, main, .container-2, aside, .flowers, .infinite-scroll, .two-div, footer {
+  border: 1px solid black;
+}
+/*# sourceMappingURL=grid.css.map */

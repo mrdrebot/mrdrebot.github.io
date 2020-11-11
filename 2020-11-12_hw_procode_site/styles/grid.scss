@@ -1,0 +1,48 @@
+.common-container {
+    display: grid;
+    grid-template-columns:  repeat(8, 10vw);
+    grid-template-rows: 11.5% 32% 18.5% 4.5% 22% 11.5%;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "as as c2 c2 c2 c2 c2 c2"
+    "as as fl fl fl fl fl fl"
+    "is is is is is is is is"
+    "td td td td td td td td"
+    "hl hl hl hl hl hl hl hl";
+    height: 100vh;
+    width: 80vw;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+header {
+    grid-area: hd;
+}
+
+aside {
+    grid-area: as;
+}
+
+.container-2 {
+    grid-area: c2;
+}
+
+.flowers {
+    grid-area: fl;
+}
+
+.infinite-scroll {
+    grid-area: is;
+}
+
+.two-div {
+    grid-area: td;
+}
+
+footer {
+    grid-area: hl;
+}
+
+header, main, .container-2, aside, .flowers, .infinite-scroll, .two-div, footer {
+    border: 1px solid black;
+}
