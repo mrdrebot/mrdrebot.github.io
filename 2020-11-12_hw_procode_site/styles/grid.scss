@@ -8,10 +8,8 @@
     "as as fl fl fl fl fl fl"
     "istd istd istd istd istd istd istd istd"
     "hl hl hl hl hl hl hl hl";
-    // "td td td td td td td td"
-    height: 100vh;
-    width: 80vw;
-    margin: 0 auto;
+    height: 100%;
+    width: 100%;
     background-color: antiquewhite;
 }
 
@@ -35,12 +33,48 @@ aside {
     grid-area: istd;
 }
 
-// .two-div {
-//     grid-area: td;
-// }
-
 footer {
     grid-area: hl;
+}
+
+.container-1 {
+    display: grid;
+    grid-template-columns:  repeat(2, 50%);
+    grid-template-rows: repeat(6, minmax(62.5px, 135px));
+    grid-template-areas: 
+    "l3 ."
+    "l3 l4"
+    "l5 l4"
+    "l5 l6"
+    "l7 l6"
+    "l7 .";
+    height: 100%;
+    width: 100%;
+}
+
+.lorem-3 {
+    grid-area: l3;
+}
+
+.lorem-4 {
+    grid-area: l4;
+}
+
+.lorem-5 {
+    grid-area: l5;
+}
+
+.lorem-6 {
+    grid-area: l6;
+}
+
+.lorem-7 {
+    grid-area: l7;
+}
+
+.container-1 > div {
+    border: 1px solid black;
+    overflow-y: scroll;
 }
 
 header, main, .container-2, aside, .flowers, .infinite-scroll, .two-div, footer {

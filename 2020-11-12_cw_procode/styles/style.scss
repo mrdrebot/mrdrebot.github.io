@@ -1,0 +1,41 @@
+.grid {
+    display: grid;
+    grid-template-columns:  repeat(2, 50%);
+    grid-template-rows: repeat(6, 16.6%);
+    grid-template-areas: 
+    "i3 . "
+    "i3 i4 "
+    "i5 i4 "
+    "i5 i6 "
+    "i7 i6 "
+    "i7 . ";
+
+    height: 100vh;
+    width: 80vw;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+.grid > div {
+    border: 1px solid black;
+}
+
+.item3 {
+    grid-area: i3;
+}
+
+.item4 {
+    grid-area: i4;
+}
+
+.item5 {
+    grid-area: i5;
+}
+
+.item6 {
+    grid-area: i6;
+}
+
+.item7 {
+    grid-area: i7;
+}

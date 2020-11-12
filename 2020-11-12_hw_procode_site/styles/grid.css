@@ -6,9 +6,8 @@
   -ms-grid-rows: 11.5% 32% 18.5% 26.5% 11.5%;
       grid-template-rows: 11.5% 32% 18.5% 26.5% 11.5%;
       grid-template-areas: "hd hd hd hd hd hd hd hd" "as as c2 c2 c2 c2 c2 c2" "as as fl fl fl fl fl fl" "istd istd istd istd istd istd istd istd" "hl hl hl hl hl hl hl hl";
-  height: 100vh;
-  width: 80vw;
-  margin: 0 auto;
+  height: 100%;
+  width: 100%;
   background-color: antiquewhite;
 }
 
@@ -53,6 +52,58 @@ footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 8;
   grid-area: hl;
+}
+
+.container-1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  -ms-grid-rows: (minmax(62.5px, 135px))[6];
+      grid-template-rows: repeat(6, minmax(62.5px, 135px));
+      grid-template-areas: "l3 ." "l3 l4" "l5 l4" "l5 l6" "l7 l6" "l7 .";
+  height: 100%;
+  width: 100%;
+}
+
+.lorem-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: l3;
+}
+
+.lorem-4 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: l4;
+}
+
+.lorem-5 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: l5;
+}
+
+.lorem-6 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: l6;
+}
+
+.lorem-7 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: l7;
+}
+
+.container-1 > div {
+  border: 1px solid black;
+  overflow-y: scroll;
 }
 
 header, main, .container-2, aside, .flowers, .infinite-scroll, .two-div, footer {

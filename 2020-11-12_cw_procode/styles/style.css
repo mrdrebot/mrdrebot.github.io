@@ -1,0 +1,53 @@
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  -ms-grid-rows: (16.6%)[6];
+      grid-template-rows: repeat(6, 16.6%);
+      grid-template-areas: "i3 . " "i3 i4 " "i5 i4 " "i5 i6 " "i7 i6 " "i7 . ";
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+
+.grid > div {
+  border: 1px solid black;
+}
+
+.item3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: i3;
+}
+
+.item4 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: i4;
+}
+
+.item5 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: i5;
+}
+
+.item6 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: i6;
+}
+
+.item7 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: i7;
+}
+/*# sourceMappingURL=style.css.map */
