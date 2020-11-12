@@ -1,14 +1,14 @@
 .common-container {
     display: grid;
     grid-template-columns:  repeat(8, 10vw);
-    grid-template-rows: 11.5% 32% 18.5% 4.5% 22% 11.5%;
+    grid-template-rows: 11.5% 32% 18.5% 26.5% 11.5%;
     grid-template-areas: 
     "hd hd hd hd hd hd hd hd"
     "as as c2 c2 c2 c2 c2 c2"
     "as as fl fl fl fl fl fl"
-    "is is is is is is is is"
-    "td td td td td td td td"
+    "istd istd istd istd istd istd istd istd"
     "hl hl hl hl hl hl hl hl";
+    // "td td td td td td td td"
     height: 100vh;
     width: 80vw;
     margin: 0 auto;
@@ -31,13 +31,13 @@ aside {
     grid-area: fl;
 }
 
-.infinite-scroll {
-    grid-area: is;
+.istd {
+    grid-area: istd;
 }
 
-.two-div {
-    grid-area: td;
-}
+// .two-div {
+//     grid-area: td;
+// }
 
 footer {
     grid-area: hl;

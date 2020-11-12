@@ -3,9 +3,9 @@
   display: grid;
   -ms-grid-columns: (10vw)[8];
       grid-template-columns: repeat(8, 10vw);
-  -ms-grid-rows: 11.5% 32% 18.5% 4.5% 22% 11.5%;
-      grid-template-rows: 11.5% 32% 18.5% 4.5% 22% 11.5%;
-      grid-template-areas: "hd hd hd hd hd hd hd hd" "as as c2 c2 c2 c2 c2 c2" "as as fl fl fl fl fl fl" "is is is is is is is is" "td td td td td td td td" "hl hl hl hl hl hl hl hl";
+  -ms-grid-rows: 11.5% 32% 18.5% 26.5% 11.5%;
+      grid-template-rows: 11.5% 32% 18.5% 26.5% 11.5%;
+      grid-template-areas: "hd hd hd hd hd hd hd hd" "as as c2 c2 c2 c2 c2 c2" "as as fl fl fl fl fl fl" "istd istd istd istd istd istd istd istd" "hl hl hl hl hl hl hl hl";
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
@@ -41,22 +41,15 @@ aside {
   grid-area: fl;
 }
 
-.infinite-scroll {
+.istd {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 8;
-  grid-area: is;
-}
-
-.two-div {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 8;
-  grid-area: td;
+  grid-area: istd;
 }
 
 footer {
-  -ms-grid-row: 6;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 8;
   grid-area: hl;

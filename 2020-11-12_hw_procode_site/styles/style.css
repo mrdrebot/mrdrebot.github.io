@@ -10,8 +10,6 @@ header {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
   width: 60%;
   min-width: 240px;
   background-color: blueviolet;
@@ -21,8 +19,6 @@ header {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
   width: 40%;
   min-width: 160px;
   background-color: red;
@@ -42,6 +38,7 @@ header {
   width: 40%;
   margin: 5%;
   background-color: khaki;
+  overflow: hidden;
 }
 
 .container-1 > .lorem-4 {
@@ -79,6 +76,10 @@ header {
   min-width: 280px;
 }
 
+.container-2 > .lorem-img-1 > img {
+  float: right;
+}
+
 .container-2 > .lorem-img-2 {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -90,7 +91,19 @@ header {
   min-width: 280px;
 }
 
+.container-2 > .lorem-img-2 > img {
+  display: block;
+  float: left;
+}
+
+.istd {
+  height: 100%;
+  overflow: hidden;
+}
+
 .infinite-scroll {
+  height: 10vw;
+  max-height: 16%;
   text-align: left;
   overflow: hidden;
   white-space: nowrap;
@@ -132,14 +145,15 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow: hidden;
+  height: 84%;
+  width: 100%;
 }
 
 .lorem-1 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  height: 80%;
+  height: 100%;
   width: 50%;
   min-width: 200px;
   background-color: blueviolet;
@@ -149,7 +163,7 @@ header {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  height: 80%;
+  height: 100%;
   width: 50%;
   min-width: 200px;
   background-color: red;
