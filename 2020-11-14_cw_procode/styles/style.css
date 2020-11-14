@@ -10,11 +10,7 @@
   font-family: 'Google Sans', sans-serif;
 }
 
-body {
-  width: 1926px;
-}
-
-.center, .tape, .filter, .adverts {
+.center, .tape, .filter, .products {
   width: 1116px;
   margin: 0 auto;
 }
@@ -24,7 +20,7 @@ header {
   background-color: #F2F2F2;
 }
 
-header div.center {
+header .center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,7 +86,7 @@ header .feedback {
   color: #FFFFFF;
 }
 
-.container div.center {
+.container .center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,16 +114,16 @@ header .feedback {
 }
 
 .tape div {
-  height: 170px;
-  width: 359px;
+  height: 169px;
+  width: 358px;
 }
 
 .tape .advert-tape-1 {
-  background-image: url(../images/advert-1.png);
+  background-image: url(../images/1.png);
 }
 
 .tape .advert-tape-2 {
-  background-image: url(../images/advert-2.png);
+  background-image: url(../images/2.png);
 }
 
 .tape::before {
@@ -184,7 +180,7 @@ header .feedback {
   color: #979FAD;
 }
 
-.adverts {
+.products {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,10 +193,11 @@ header .feedback {
       flex-wrap: wrap;
 }
 
-.adverts div {
+.products .product {
   margin-bottom: 30px;
   height: 400px;
   width: 253px;
-  background-image: url(../images/advert.png);
+  background-color: #745ACD;
+  background-image: url(../images/4.png);
 }
 /*# sourceMappingURL=style.css.map */
