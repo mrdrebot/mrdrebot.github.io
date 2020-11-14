@@ -51,6 +51,7 @@
         justify-content: space-evenly;
         height: 50%;
         width: 60%;
+        max-width: 100%;
         background-color: lawngreen;
         overflow: hidden;
     }
@@ -63,8 +64,8 @@
     
     .picture  {
         align-self: center;
-        height: 31px;
-        width: 41px;
+        height: 41px;
+        width: 42px;
         background-color: green;
         border-radius: 50%;
     }
@@ -144,5 +145,6 @@
         height: 101px;
         width: 99.7%;
         background-color: mediumblue;
+        border: 1px solid black;
     }
 }
