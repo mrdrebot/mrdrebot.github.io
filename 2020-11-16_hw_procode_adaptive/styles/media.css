@@ -1,0 +1,96 @@
+@media screen and (max-width: 1110px) {
+  .filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: bold;
+    color: #333333;
+  }
+  .filter label, .filter select {
+    display: none;
+  }
+  .filter .currency, .filter .price {
+    display: inline;
+    font-family: "fontello";
+  }
+  .filter .currency::before {
+    content: '\f15a';
+    margin-right: 15px;
+    font-family: "fontello";
+  }
+  .filter .price::before {
+    content: '\f0b0';
+    display: inline;
+    margin-right: 15px;
+    font-family: "fontello";
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .center {
+    width: 100%;
+  }
+  header {
+    min-width: 100%;
+  }
+  header .sing-in {
+    margin-right: 15px;
+  }
+  .menu-search-select {
+    height: 100%;
+    min-width: 100%;
+  }
+  .menu-search-select .center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: inherit;
+  }
+  .menu-search-select nav, .menu-search-select .search-select, .menu-search-select .place-ad {
+    margin: 5px;
+  }
+  .tape {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 100%;
+    width: 90%;
+  }
+  .tape div {
+    height: 169px;
+    width: 358px;
+    border-radius: 5px;
+  }
+  .products {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .center {
+    width: 375px;
+  }
+  header {
+    min-width: 375px;
+  }
+}
+/*# sourceMappingURL=media.css.map */

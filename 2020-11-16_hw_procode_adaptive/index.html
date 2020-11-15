@@ -6,6 +6,7 @@
     <title>2020-11-14_CW_ProCode</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/media.css">
 </head>
 <body>
     <header>
@@ -14,36 +15,37 @@
             <div class="sing-in">Войти</div>
         </div>
     </header>
-    <div class="container">
+    <div class="menu-search-select">
         <div class="center">
                 <nav></nav>
                 <div class="search-select">
                     <div class="search">Поиск объявлений</div>
-                    <img src="./images/vertical-line.png" alt="vertical-line">
                     <div class="select-city">Город поиска</div>
                 </div>
                 <button class="place-ad">Разместить объявление</button>
         </div>
     </div>
-    <div class="tape">
+    <div class="center tape">
         <div class="advert-tape-1"></div>
         <div class="advert-tape-2"></div>
         <div class="advert-tape-1"></div>
     </div>
-    <div class="filter">
+    <div class="center filter">
         <p>Все объявления</p>
         <div class="container-filter">
-            <label for="currency" class="currency">Валюта:</label>
+            <label for="currency" class="currency"></label>
+            <label for="currency" class="filter-currency-">Валюта:</label>
             <select name="currency" id="currency">
                 <option value="Bitcoin" selected>Bitcoin</option>
             </select>
+            <label for="price" class="price"></label>
             <label for="price">Цена:</label>
-            <select name="price" id="price">
+            <select name="price" id="filter-price">
                 <option value="ascending" selected>По возрастанию</option>
             </select>
         </div>
     </div>
-    <div class="products">
+    <div class="center products">
         <div class="product"></div>
         <div class="product"></div>
         <div class="product"></div>
@@ -57,6 +59,8 @@
         <div class="product"></div>
         <div class="product"></div>
     </div>
-    <button class="more"></button>
+    <div class="center more">
+        <button>Показать еще</button>
+    </div>
 </body>
 </html>
