@@ -1,3 +1,7 @@
+@media screen and (max-width: 1206px) {
+    
+}
+
 @media screen and (max-width: 1110px) {
     .filter {
         display: flex;
@@ -58,6 +62,10 @@
             margin: 5px;
         }
     }
+
+    :nth-child(3) {
+        width: 100%;
+    }
     
     .tape {
         position: relative;
@@ -73,6 +81,10 @@
             width: 358px;
             border-radius: 5px;
         }
+
+        .arrow {
+            display: none;
+        }
     }
 
     .products {
@@ -80,7 +92,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
     .center {
         width: 375px;
     }

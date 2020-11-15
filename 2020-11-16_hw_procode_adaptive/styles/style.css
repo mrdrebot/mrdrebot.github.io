@@ -19,13 +19,13 @@
 }
 
 .center {
-  width: 1110px;
+  width: 1206px;
   margin: 0 auto;
 }
 
 header {
   height: 36px;
-  min-width: 1110px;
+  min-width: 1206px;
   background-color: #F2F2F2;
 }
 
@@ -45,9 +45,13 @@ header .feedback {
   margin-right: 37px;
 }
 
+header .sing-in {
+  margin-right: 48px;
+}
+
 .menu-search-select {
   height: 83px;
-  min-width: 1110px;
+  min-width: 1206px;
   font-size: 14px;
   background-color: #FFFFFF;
   border-bottom: 1px solid #E8E8EE;
@@ -70,6 +74,7 @@ header .feedback {
   height: 19px;
   width: 26px;
   background-image: url(../images/menu-options.png);
+  margin-left: 48px;
 }
 
 .menu-search-select .search-select {
@@ -120,13 +125,13 @@ header .feedback {
 .menu-search-select .place-ad {
   width: 218px;
   height: 44px;
+  margin-right: 48px;
   background: linear-gradient(245.23deg, #32228A -43.18%, #745ACD 100%), #C4C4C4;
   border-radius: 3px;
   color: #FFFFFF;
 }
 
 .tape {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,12 +142,28 @@ header .feedback {
       -ms-flex-align: center;
           align-items: center;
   height: 221px;
+  width: 1206px;
+  margin: 0 auto;
 }
 
 .tape div {
   height: 169px;
   width: 358px;
   border-radius: 5px;
+}
+
+.tape .arrow {
+  height: 30px;
+  width: 30px;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #E8E8EE;
+  border-radius: 3px;
+}
+
+.tape .left {
+  background-image: url(../images/arrow-left.png);
 }
 
 .tape .advert-tape-1 {
@@ -153,32 +174,8 @@ header .feedback {
   background-image: url(../images/2.png);
 }
 
-.tape::before {
-  content: "";
-  position: absolute;
-  left: -40px;
-  height: 30px;
-  width: 30px;
-  background-color: #FFFFFF;
-  background-image: url(../images/arrow-left.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid #E8E8EE;
-  border-radius: 3px;
-}
-
-.tape::after {
-  content: "";
-  position: absolute;
-  right: -40px;
-  height: 30px;
-  width: 30px;
-  background-color: #FFFFFF;
+.tape .right {
   background-image: url(../images/arrow-right.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid #E8E8EE;
-  border-radius: 3px;
 }
 
 .filter {
@@ -192,6 +189,8 @@ header .feedback {
       -ms-flex-align: center;
           align-items: center;
   font-weight: bold;
+  margin-left: 48px;
+  margin-right: 48px;
   color: #333333;
 }
 
@@ -223,6 +222,8 @@ header .feedback {
       align-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-left: 48px;
+  margin-right: 48px;
 }
 
 .products .product {

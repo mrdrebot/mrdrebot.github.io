@@ -58,6 +58,9 @@
   .menu-search-select nav, .menu-search-select .search-select, .menu-search-select .place-ad {
     margin: 5px;
   }
+  :nth-child(3) {
+    width: 100%;
+  }
   .tape {
     position: relative;
     display: -webkit-box;
@@ -79,13 +82,16 @@
     width: 358px;
     border-radius: 5px;
   }
+  .tape .arrow {
+    display: none;
+  }
   .products {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .center {
     width: 375px;
   }
