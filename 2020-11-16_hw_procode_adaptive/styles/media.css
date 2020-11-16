@@ -31,6 +31,7 @@
         flex-wrap: wrap;
     height: 100%;
     width: 90%;
+    margin-top: 20px;
   }
   .tape div {
     height: 169px;
@@ -92,6 +93,9 @@
     width: 375px;
   }
   header {
+    min-width: 375px;
+  }
+  .tape {
     min-width: 375px;
   }
 }
