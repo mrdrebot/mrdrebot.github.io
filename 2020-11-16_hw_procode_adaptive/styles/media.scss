@@ -84,6 +84,14 @@
     }
 }
 
+@media screen and (max-width: 945px) {
+    .menu-search-select {
+        .search-select {
+            display: none;
+        }
+    }
+}
+
 @media screen and (max-width: 800px) {
     .advert-tape-1 {
         margin-bottom: 15px;
