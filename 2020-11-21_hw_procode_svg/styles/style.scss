@@ -1,0 +1,29 @@
+.horseshoe {
+    height: 512px;
+    width: 512px;
+    margin: 10% auto;
+
+    &:hover svg {
+        transform: rotate(180deg);
+    }
+
+    &:hover .bg-horseshoe {
+        fill: green;
+    }
+
+    &:hover .rotate {
+        margin: 0 auto;
+        fill: gold;
+        transform-origin: 50% 50%;
+        animation: change-size 2s infinite linear;
+    }
+
+}
+
+@keyframes change-size {
+    0% {transform: scale(1) rotate(0);}
+    25% {transform: scale(0.75) rotate(45deg);}
+    50% {transform: scale(0.5) rotate(0);}
+    75% {transform: scale(0.75) rotate(-45deg);}
+    100% {transform: scale(1) rotate(0);}
+}

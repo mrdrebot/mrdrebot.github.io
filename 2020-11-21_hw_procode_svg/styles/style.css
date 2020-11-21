@@ -1,0 +1,70 @@
+.horseshoe {
+  height: 512px;
+  width: 512px;
+  margin: 10% auto;
+}
+
+.horseshoe:hover svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.horseshoe:hover .bg-horseshoe {
+  fill: green;
+}
+
+.horseshoe:hover .rotate {
+  margin: 0 auto;
+  fill: gold;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: change-size 2s infinite linear;
+          animation: change-size 2s infinite linear;
+}
+
+@-webkit-keyframes change-size {
+  0% {
+    -webkit-transform: scale(1) rotate(0);
+            transform: scale(1) rotate(0);
+  }
+  25% {
+    -webkit-transform: scale(0.75) rotate(45deg);
+            transform: scale(0.75) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotate(0);
+            transform: scale(0.5) rotate(0);
+  }
+  75% {
+    -webkit-transform: scale(0.75) rotate(-45deg);
+            transform: scale(0.75) rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+            transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes change-size {
+  0% {
+    -webkit-transform: scale(1) rotate(0);
+            transform: scale(1) rotate(0);
+  }
+  25% {
+    -webkit-transform: scale(0.75) rotate(45deg);
+            transform: scale(0.75) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotate(0);
+            transform: scale(0.5) rotate(0);
+  }
+  75% {
+    -webkit-transform: scale(0.75) rotate(-45deg);
+            transform: scale(0.75) rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+            transform: scale(1) rotate(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
