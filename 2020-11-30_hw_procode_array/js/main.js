@@ -77,12 +77,13 @@ const findNumber = (start, end, count, temp) => {
     temp = start - temp;    //Сохранение значения предыдущего значения числа в ряду
 
     if(start < end) {
-        findNumber(start, end, count, temp);
+        [count, temp] = findNumber(start, end, count, temp);
     }
-    else {
-        console.log("Количество итераций = ", count);
-        console.log("Ближайшее число Фибоначи перед числом 9991999 = ", temp);
-    }
-}
 
+    return [count, temp];
+}
+    
 fibonachiNumber = findNumber(startNumber, limit, iterСounter, previousValue);
+
+console.log("Количество итераций = ", fibonachiNumber[0]);
+console.log("Ближайшее число Фибоначи перед числом 9991999 = ", fibonachiNumber[1]);
