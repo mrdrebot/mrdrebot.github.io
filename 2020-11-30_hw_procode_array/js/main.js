@@ -3,24 +3,36 @@ console.log("Задача №1");
 let arr = [1,2,3,4,5,6,7,8,9];
 console.log("Массив до провоерки", arr);
 
-for(let i = 2; i < 8; i++) {
-    if(i === 2 || i === 5 || i === 7) {
-        if(arr[i] !== (arr[i - 1] + arr[i + 1])) {
-            arr[i] = arr[i - 1] + arr[i + 1]
-        }
+//Функция проверки суммы числа
+const checkSum = (index) => {
+    if(arr[index] !== (arr[index - 1] + arr[index + 1])) {
+        arr[index] = arr[index - 1] + arr[index + 1];
     }
+
+    return arr[index];
 }
+
+//Проверка сумм
+arr[2] = checkSum(2);
+arr[5] = checkSum(5);
+arr[7] = checkSum(7);
 
 console.log("Массив после провоерки", arr);
 
 //Задача №2
 console.log("\nЗадача №2");
 
-let arrNumderQuantity = 8;
+let arrNumderQuantity = 8; //указал конкретное число ,что бы не выскакивал prompt
+// let arrNumderQuantity = Number(prompt("Задайте размер массива:")) - 1;
 let randomArr = [arrNumderQuantity];
-let min = -1;   //нижняя граница интервала выборки числа
-let max = 22;   //верхняя граница интервала выборки числа
+//указал конкретные числа max & min, что бы не выскакивал prompt
+let min = -1;
+let max = 21;
+// let min = Number(prompt("Задайте нижнюю границу выборки числа:"));   //нижняя граница интервала выборки числа
+// let max = Number(prompt("Задайте верхнюю границу выборки числа:"));   //верхняя граница интервала выборки числа
 let minArrNumber = null;
+let firstMinusMin = null;
+let lastMinusMin = null;
 
 //Функция генерирования случайных чисел
 const selfRandom = (min, max) => {
@@ -36,11 +48,13 @@ for(let i = 0; i <= arrNumderQuantity; i++) {
     }
 }
 
+firstMinusMin = randomArr[0]- minArrNumber;
+lastMinusMin = randomArr[randomArr.length - 1]- minArrNumber;
+
 console.log("Заполненный массив ", randomArr);
 console.log("Минимально число массива = ", minArrNumber);
-console.log("randomArr[0] - minArrNumber = " + randomArr[0] + " - " + minArrNumber + " = ", randomArr[0]- minArrNumber);
-console.log("randomArr[8] - minArrNumber = " + randomArr[8] + " - " + minArrNumber + " = ", randomArr[8]- minArrNumber);
-console.log("arrNumderQuantity ", arrNumderQuantity);
+console.log("randomArr[0] - minArrNumber = " + randomArr[0] + " - " + minArrNumber + " = ", firstMinusMin);
+console.log("randomArr[" + (randomArr.length - 1) + "] - minArrNumber = " + randomArr[randomArr.length - 1] + " - " + minArrNumber + " = ", lastMinusMin);
 
 //Задача №3
 console.log("\nЗадача №3");
