@@ -53,8 +53,8 @@ lastMinusMin = randomArr[randomArr.length - 1]- minArrNumber;
 
 console.log("Заполненный массив ", randomArr);
 console.log("Минимально число массива = ", minArrNumber);
-console.log("randomArr[0] - minArrNumber = " + randomArr[0] + " - " + minArrNumber + " = ", firstMinusMin);
-console.log("randomArr[" + (randomArr.length - 1) + "] - minArrNumber = " + randomArr[randomArr.length - 1] + " - " + minArrNumber + " = ", lastMinusMin);
+console.log(`randomArr[0] - minArrNumber = ${randomArr[0]} - ${minArrNumber} = `, firstMinusMin);
+console.log(`randomArr[${randomArr.length - 1}] - minArrNumber = ${randomArr[randomArr.length - 1]} - ${minArrNumber} = `, lastMinusMin);
 
 //Задача №3
 console.log("\nЗадача №3");
