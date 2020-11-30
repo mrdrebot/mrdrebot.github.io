@@ -4,18 +4,18 @@ let arr = [1,2,3,4,5,6,7,8,9];
 console.log("Массив до провоерки", arr);
 
 //Функция проверки суммы числа
-const checkSum = (index) => {
-    if(arr[index] !== (arr[index - 1] + arr[index + 1])) {
-        arr[index] = arr[index - 1] + arr[index + 1];
+const checkSum = (index, getArr) => {
+    if(getArr[index] !== (getArr[index - 1] + getArr[index + 1])) {
+        getArr[index] = getArr[index - 1] + getArr[index + 1];
     }
 
-    return arr[index];
+    return getArr[index];
 }
 
 //Проверка сумм
-arr[2] = checkSum(2);
-arr[5] = checkSum(5);
-arr[7] = checkSum(7);
+arr[2] = checkSum(2, arr);
+arr[5] = checkSum(5, arr);
+arr[7] = checkSum(7, arr);
 
 console.log("Массив после провоерки", arr);
 
@@ -61,6 +61,7 @@ console.log("\nЗадача №3");
 
 //для третьей задачи взяты переменные (данные) второй: arrNumderQuantity, min, max и функция "selfRandom"
 randomArr = [arrNumderQuantity];
+randomArr2 = [];
 
 //Наполняем массив
 for(let i = 0; i <= arrNumderQuantity; i++) {
@@ -70,10 +71,10 @@ for(let i = 0; i <= arrNumderQuantity; i++) {
 console.log("Заполненный массив ", randomArr);
 
 for(let i = 0; i <= arrNumderQuantity; i++) {
-    randomArr[i] = randomArr[i] * 3 - 5;
+    randomArr2[i] = randomArr[i] * 3 - 5;
 }
 
-console.log("Измененный массив ", randomArr);
+console.log("Измененный массив ", randomArr2);
 
 //Задача №4
 console.log("\nЗадача №4");
