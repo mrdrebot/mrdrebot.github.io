@@ -60,8 +60,8 @@ console.log(`randomArr[${randomArr.length - 1}] - minArrNumber = ${randomArr[ran
 console.log("\nЗадача №3");
 
 //для третьей задачи взяты переменные (данные) второй: arrNumderQuantity, min, max и функция "selfRandom"
+let randomArr2 = [];
 randomArr = [arrNumderQuantity];
-randomArr2 = [];
 
 //Наполняем массив
 for(let i = 0; i <= arrNumderQuantity; i++) {
