@@ -1,0 +1,47 @@
+.container {
+    display: grid;
+    grid-template-rows: repeat(4, 25%);
+    grid-template-columns: repeat(5, 20%);
+    grid-template-areas: 
+    "in1 in1 in1 in1 bt"
+    "sb1 sb2 sb3 sb4 bt"
+    "in2 in2 in2 in2 bt"
+    "div div div div div";
+
+    height: 500px;
+    width: 600px;
+    margin: 100px auto;
+    border: 2px solid black;
+}
+
+.input-grid-1 {
+    grid-area: in1;
+}
+
+.vertical-button {
+    grid-area: bt;
+}
+
+.small-button-1 {
+    grid-area: sb1;
+}
+
+.small-button-2 {
+    grid-area: sb2;
+}
+
+.small-button-3 {
+    grid-area: sb3;
+}
+
+.small-button-4 {
+    grid-area: sb4;
+}
+
+.input-grid-2 {
+    grid-area: in2;
+}
+
+.bottom {
+    grid-area: div;
+}

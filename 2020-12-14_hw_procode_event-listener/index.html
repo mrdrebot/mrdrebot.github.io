@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2020-12-14_HW_ProCode</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <style>
+        .container {
+            width: 500px;
+            margin: 0 auto;;
+        }
+    </style>
 </head>
 <body>
-    <h1>2020-12-14_HW_ProCode Задача</h1>
-    <form class = "add">
-        <label for="input-text">The text below will be split:</label>
-        <br><br>
-        <textarea id="input-text" name="input-text" rows="4" cols="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis in molestias incidunt explicabo recusandae consequatur asperiores veniam corrupti quas, dolor est possimus. Officia, sed omnis! Distinctio doloribus unde commodi expedita.</textarea>
-        <br><br>
-        <!-- <button class = "button">Go</button> -->
-        <input class = "button" type="submit" value="Go">
-        <p>Click the "Go" button and the data will be split and each word displayed in a separate textarea</p>
-    </form>
-    <!-- <input class = "button" type="submit" value="Go"> -->
+    <div class="container">
+        <h1>2020-12-14_HW_ProCode</h1>
+        <form class = "add">
+            <label for="input-text">The text below will be split:</label>
+            <br><br>
+            <textarea id="input-text" name="input-text" rows="4" cols="50"></textarea>
+            <br><br>
+            <button class = "button">Go</button>
+            <!-- <input class = "button" type="submit" value="Go"> -->
+            <p>Click the "Go" button and the data will be split and each word displayed in a separate textarea</p>
+        </form>
+    </div>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
