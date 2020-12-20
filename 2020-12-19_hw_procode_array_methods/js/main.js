@@ -54,5 +54,5 @@ console.log(valArr.sort((a, b) => {
 
 //Задание 2(c)
 console.log("Задание 2(c)");
-let foundElemArr = valArr.filter(elem => (elem % 5 === 0 && elem !== 0));
+let foundElemArr = valArr.some(elem => (elem % 5 === 0 && elem !== 0));
 console.log(foundElemArr);
