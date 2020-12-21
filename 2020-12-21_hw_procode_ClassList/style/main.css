@@ -1,0 +1,117 @@
+@-webkit-keyframes moveLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -1500px;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -1500px;
+  }
+}
+
+@-webkit-keyframes moveRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 1500px;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 1500px;
+  }
+}
+
+.engine, .control {
+  position: relative;
+  height: auto;
+  width: 500px;
+  margin: 100px auto;
+  font-size: 0;
+}
+
+.cabin, .trumpet, .lamp, .wheel, .protection {
+  display: inline-block;
+}
+
+.cabin, .trumpet, .body {
+  background-color: grey;
+}
+
+.cabin {
+  height: 100px;
+  width: 200px;
+}
+
+.trumpet {
+  height: 100px;
+  width: 50px;
+  margin-left: 100px;
+}
+
+.lamp {
+  height: 25px;
+  width: 25px;
+  margin-left: 65px;
+  background-color: grey;
+}
+
+.body {
+  height: 150px;
+  width: inherit;
+  border-radius: 0 75px 75px 0;
+}
+
+.wheel {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.protection {
+  border: 50px solid transparent;
+  border-bottom: 50px solid black;
+  border-left: 50px solid black;
+}
+
+.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  margin: 30px;
+  font-size: 14px;
+}
+
+.left-move {
+  -webkit-animation: moveLeft 5s linear infinite;
+          animation: moveLeft 5s linear infinite;
+}
+
+.right-move {
+  -webkit-animation: moveRight 5s linear infinite;
+          animation: moveRight 5s linear infinite;
+}
+/*# sourceMappingURL=main.css.map */
