@@ -10,33 +10,40 @@ let left = document.querySelector(".left");
 let right = document.querySelector(".right");
 let lamp = document.querySelector(".lamp");
 let fbtn = document.querySelector(".f-btn");
-// let engineCoords = engine.getBoundingClientRect();
-// let startPoint = null;
+let startPoint = 0;
 
-//Вариант 1 - ketframes в CSS
+// Вариант 1 - ketframes в CSS
 left.addEventListener("click", () => {
     if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
         engine.style.animationPlayState = "running";
-        // engine.style.left = startPoint;
+        engine.style.left = startPoint;
+        console.log(`engine.style.left = ${engine.style.left}`);
+        // startPoint = getComputedStyle(engine).left;
+        // console.dir(getComputedStyle(engine));
+        // console.dir(getComputedStyle(engine));
         engine.classList.add("left-move");
         engine.classList.remove("right-move");
     }
     else {
         engine.style.animationPlayState = "paused"
+        startPoint = getComputedStyle(engine).left;
+        console.log(`startPoint = ${startPoint}`);
         // startPoint = `${engineCoords.left}px`;
     }
 });
 
-left.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", (event) => {
     if(event.code === "ArrowLeft") {
         if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
             engine.style.animationPlayState = "running";
-            // engine.style.left = startPoint;
+            engine.style.left = startPoint;
+            // console.log(`engine.style.left = ${engine.style.left}`);
             engine.classList.add("left-move");
             engine.classList.remove("right-move");
         }
         else {
-            engine.style.animationPlayState = "paused"
+            engine.style.animationPlayState = "paused";
+            startPoint = getComputedStyle(engine).left;
             // startPoint = `${engineCoords.left}px`;
         }
     }
@@ -45,17 +52,22 @@ left.addEventListener("keydown", (event) => {
 right.addEventListener("click", () => {
     if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
         engine.style.animationPlayState = "running";
-        // engine.style.left = startPoint;
+        engine.style.left = startPoint;
+        console.log(`engine.style.left = ${engine.style.left}`);
+        // console.log(engine.style.left);
         engine.classList.remove("left-move");
         engine.classList.add("right-move");
+        
     }
     else {
-        engine.style.animationPlayState = "paused"
+        engine.style.animationPlayState = "paused";
+        startPoint = getComputedStyle(engine).left;
+        console.log(`startPoint = ${startPoint}`);
         // startPoint = `${engineCoords.left}px`;
     }
 });
 
-right.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", (event) => {
     if(event.code === "ArrowRight") {
         if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
             engine.style.animationPlayState = "running";
@@ -70,7 +82,7 @@ right.addEventListener("keydown", (event) => {
     }
 });
 
-fbtn.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", (event) => {
     if(event.code === "KeyF") {
         if(lamp.style.backgroundColor === "grey" || lamp.style.backgroundColor === "") {
             lamp.style.backgroundColor = "yellow";
@@ -81,7 +93,158 @@ fbtn.addEventListener("keydown", (event) => {
             fbtn.innerHTML = "Off";
         }
     }
-}, false);
+});
+
+fbtn.addEventListener("click", (event) => {
+    if(lamp.style.backgroundColor === "grey" || lamp.style.backgroundColor === "") {
+        lamp.style.backgroundColor = "yellow";
+        fbtn.innerHTML = "On";
+    }
+    else {
+        lamp.style.backgroundColor = "grey";
+        fbtn.innerHTML = "Off";
+    }
+});
+
+// //Вариант 2 - setInterval
+// let actCount = 0;
+// let move = null;
+// let tmp = null;
+//
+// left.addEventListener("click", () => {
+//     let left = null;
+    
+//     if(actCount === 0) {
+//         actCount++;
+//         (tmp === null) ? left = 0 : left = tmp;
+        
+//         const step = () => {
+//             if (engine.offsetLeft <= 0 || actCount > 1) {
+//                 actCount = 0;
+//                 clearInterval(move); // закончить анимацию через 2 секунды
+//             }
+//             else {
+//                 left -= 5;
+//                 engine.style.left = `${left}px`; 
+//             }
+//         }
+    
+//         move = setInterval(step, 10);
+//     }
+//     else {
+//         actCount = 0;
+//         tmp = Number(engine.style.left.slice(0, -2));
+//         clearInterval(move);
+//     }
+// });
+
+// right.addEventListener("click", () => {
+//     let left = null;
+    
+//     if(actCount === 0) {
+//         actCount++;
+//         (tmp === null) ? left = 0 : left = tmp;
+        
+//         const step = () => {
+//             if (engine.offsetLeft <= 0 || actCount > 1) {
+//                 actCount = 0;
+//                 clearInterval(move); // закончить анимацию через 2 секунды
+//             }
+//             else {
+//                 left += 5;
+//                 engine.style.left = `${left}px`; 
+//             }
+//         }
+    
+//         move = setInterval(step, 10);
+//     }
+//     else {
+//         actCount = 0;
+//         tmp = Number(engine.style.left.slice(0, -2));
+//         clearInterval(move);
+//     }
+// });
+
+// //Вариант 1 - ketframes в CSS
+// left.addEventListener("click", () => {
+//     if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
+//         engine.style.animationPlayState = "running";
+//         // engine.style.left = startPoint;
+//         engine.classList.add("left-move");
+//         engine.classList.remove("right-move");
+//     }
+//     else {
+//         engine.style.animationPlayState = "paused"
+//         // startPoint = `${engineCoords.left}px`;
+//     }
+// });
+
+// document.addEventListener("keydown", (event) => {
+//     if(event.code === "ArrowLeft") {
+//         if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
+//             engine.style.animationPlayState = "running";
+//             // engine.style.left = startPoint;
+//             engine.classList.add("left-move");
+//             engine.classList.remove("right-move");
+//         }
+//         else {
+//             engine.style.animationPlayState = "paused"
+//             // startPoint = `${engineCoords.left}px`;
+//         }
+//     }
+// }, false);
+
+// right.addEventListener("click", () => {
+//     if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
+//         engine.style.animationPlayState = "running";
+//         // engine.style.left = startPoint;
+//         engine.classList.remove("left-move");
+//         engine.classList.add("right-move");
+//     }
+//     else {
+//         engine.style.animationPlayState = "paused"
+//         // startPoint = `${engineCoords.left}px`;
+//     }
+// });
+
+// document.addEventListener("keydown", (event) => {
+//     if(event.code === "ArrowRight") {
+//         if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
+//             engine.style.animationPlayState = "running";
+//             // engine.style.left = startPoint;
+//             engine.classList.remove("left-move");
+//             engine.classList.add("right-move");
+//         }
+//         else {
+//             engine.style.animationPlayState = "paused"
+//             // startPoint = `${engineCoords.left}px`;
+//         }
+//     }
+// });
+
+// document.addEventListener("keydown", (event) => {
+//     if(event.code === "KeyF") {
+//         if(lamp.style.backgroundColor === "grey" || lamp.style.backgroundColor === "") {
+//             lamp.style.backgroundColor = "yellow";
+//             fbtn.innerHTML = "On";
+//         }
+//         else {
+//             lamp.style.backgroundColor = "grey";
+//             fbtn.innerHTML = "Off";
+//         }
+//     }
+// });
+
+// fbtn.addEventListener("click", (event) => {
+//     if(lamp.style.backgroundColor === "grey" || lamp.style.backgroundColor === "") {
+//         lamp.style.backgroundColor = "yellow";
+//         fbtn.innerHTML = "On";
+//     }
+//     else {
+//         lamp.style.backgroundColor = "grey";
+//         fbtn.innerHTML = "Off";
+//     }
+// });
 
 //Вариант 2 - setInterval
 // left.addEventListener("click", () => {

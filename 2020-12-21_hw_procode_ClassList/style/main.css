@@ -1,36 +1,32 @@
 @-webkit-keyframes moveLeft {
   0% {
-    left: 0;
   }
   100% {
-    left: -1500px;
+    left: -100%;
   }
 }
 
 @keyframes moveLeft {
   0% {
-    left: 0;
   }
   100% {
-    left: -1500px;
+    left: -100%;
   }
 }
 
 @-webkit-keyframes moveRight {
   0% {
-    left: 0;
   }
   100% {
-    left: 1500px;
+    left: 100%;
   }
 }
 
 @keyframes moveRight {
   0% {
-    left: 0;
   }
   100% {
-    left: 1500px;
+    left: 100%;
   }
 }
 
