@@ -15,9 +15,9 @@ let valArr = [5, 23, -110, 3, 18, 0, 14];
 
 //Задание 1(a)
 console.log("Задание 1(a)");
-for(let i = 0; i < valArr.length; i++) {
-    if(valArr[i] % 2 !== 0) console.log(valArr[i]);
-}
+valArr.forEach(elem => {
+    if(elem % 2 !== 0) console.log(elem);
+});
 
 //Задание 1(b)
 console.log("Задание 1(b)");
@@ -26,9 +26,8 @@ console.log(valArrMap);
 
 //Задание 1(c)
 console.log("Задание 1(c)");
-valArr.forEach((elem) => {
-    if(elem > 0 && elem % 2 !== 0) console.log(elem);
-});
+let valArrFilter = valArr.filter((elem) => (elem > 0 && elem % 2 !== 0));
+console.log(valArrFilter);
 
 //Задание 1(d)
 console.log("Задание 1(d)");
