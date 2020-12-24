@@ -3,9 +3,7 @@
         
     }
     100% {
-        // left: -1500px;
-        left: -100%;
-        
+        left: 0%;
     }
 }
 
@@ -14,9 +12,7 @@
         
     }
     100% {
-        // left: 1500px;
-        // right: 100%;
-        left: 100%;
+        left: 67%;
     }
 }
 
@@ -25,7 +21,6 @@
     position: relative;
     height: auto;
     width: 500px;
-    margin: 100px auto;
     font-size: 0;
 }
 .cabin, .trumpet, .lamp, .wheel, .protection {
@@ -34,6 +29,10 @@
 
 .cabin, .trumpet, .body {
     background-color: grey;
+}
+
+.engine {
+    margin-top: 100px;
 }
 
 .cabin {
@@ -77,19 +76,20 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    margin: 100px auto;
 }
 
 button {
     height: 50px;
     width: 100px;
     margin: 30px;
-    font-size: 14px;
+    font-size: 25px;
 }
 
 .left-move {
-    animation: moveLeft 5s linear infinite;
+    animation: moveLeft 5s linear forwards;
 }
 
 .right-move {
-    animation: moveRight 5s linear infinite;
+    animation: moveRight 5s linear forwards;
 }

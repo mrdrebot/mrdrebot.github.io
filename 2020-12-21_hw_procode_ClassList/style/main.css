@@ -2,7 +2,7 @@
   0% {
   }
   100% {
-    left: -100%;
+    left: 0%;
   }
 }
 
@@ -10,7 +10,7 @@
   0% {
   }
   100% {
-    left: -100%;
+    left: 0%;
   }
 }
 
@@ -18,7 +18,7 @@
   0% {
   }
   100% {
-    left: 100%;
+    left: 67%;
   }
 }
 
@@ -26,7 +26,7 @@
   0% {
   }
   100% {
-    left: 100%;
+    left: 67%;
   }
 }
 
@@ -34,7 +34,6 @@
   position: relative;
   height: auto;
   width: 500px;
-  margin: 100px auto;
   font-size: 0;
 }
 
@@ -44,6 +43,10 @@
 
 .cabin, .trumpet, .body {
   background-color: grey;
+}
+
+.engine {
+  margin-top: 100px;
 }
 
 .cabin {
@@ -92,22 +95,23 @@
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin: 100px auto;
 }
 
 button {
   height: 50px;
   width: 100px;
   margin: 30px;
-  font-size: 14px;
+  font-size: 25px;
 }
 
 .left-move {
-  -webkit-animation: moveLeft 5s linear infinite;
-          animation: moveLeft 5s linear infinite;
+  -webkit-animation: moveLeft 5s linear forwards;
+          animation: moveLeft 5s linear forwards;
 }
 
 .right-move {
-  -webkit-animation: moveRight 5s linear infinite;
-          animation: moveRight 5s linear infinite;
+  -webkit-animation: moveRight 5s linear forwards;
+          animation: moveRight 5s linear forwards;
 }
 /*# sourceMappingURL=main.css.map */

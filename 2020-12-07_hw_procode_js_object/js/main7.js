@@ -31,7 +31,11 @@ carsColorArr.forEach(col => {
         airСondArr.forEach(air => {
             inteDecArr.forEach(inte => {
                 carCouunt++;
-                let car = new Car(col, tra, air, inte);
+                let car = new Object();
+                car.color = col;
+                car.transmition = tra;
+                car.aircondition = air;
+                car.salon = inte;
                 car.code = `${carCouunt}${col[0]}${tra[0]}${air[0]}${inte[0]}`;
                 car.code = car.code.padStart(carCodeLength, "0").toUpperCase();
                 carsCatalog.carArr.push(car);
@@ -39,5 +43,19 @@ carsColorArr.forEach(col => {
         })
     })
 });
+
+// carsColorArr.forEach(col => {
+//     transmArr.forEach(tra => {
+//         airСondArr.forEach(air => {
+//             inteDecArr.forEach(inte => {
+//                 carCouunt++;
+//                 let car = new Car(col, tra, air, inte);
+//                 car.code = `${carCouunt}${col[0]}${tra[0]}${air[0]}${inte[0]}`;
+//                 car.code = car.code.padStart(carCodeLength, "0").toUpperCase();
+//                 carsCatalog.carArr.push(car);
+//             })
+//         })
+//     })
+// });
 
 console.log(carsCatalog);

@@ -10,78 +10,91 @@ let left = document.querySelector(".left");
 let right = document.querySelector(".right");
 let lamp = document.querySelector(".lamp");
 let fbtn = document.querySelector(".f-btn");
-let startPoint = 0;
+let windWidth = document.documentElement.clientWidth;
+engine.style.left = `${(windWidth - engine.clientWidth) / 2}px`;
+let animSpeed = windWidth / 5;
+console.log(`animSpeed = ${animSpeed}`);
 
-// Вариант 1 - ketframes в CSS
+// Вариант 1 - keyframes в CSS
+// Нажатие кнопки "Влево" мышкой
 left.addEventListener("click", () => {
     if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
         engine.style.animationPlayState = "running";
-        engine.style.left = startPoint;
-        console.log(`engine.style.left = ${engine.style.left}`);
-        // startPoint = getComputedStyle(engine).left;
-        // console.dir(getComputedStyle(engine));
-        // console.dir(getComputedStyle(engine));
+        engine.classList.add("left-move");
+        engine.classList.remove("right-move");
+    }
+    else if(engine.style.animationPlayState = "running" && engine.className === "engine right-move") {
+        engine.style.left = getComputedStyle(engine).left;
+        engine.style.animationDuration = `${(Number(getComputedStyle(engine).left.slice(0, -2)) + engine.clientWidth) / animSpeed}s`;
+        // engine.style.animationDuration = `${(Number(getComputedStyle(engine).left.slice(0, -2))) / animSpeed}s`;
+        console.log(`speed LEFT = ${(Number(getComputedStyle(engine).left.slice(0, -2)) + engine.clientWidth) / Number(engine.style.animationDuration.slice(0, -1))}`);
         engine.classList.add("left-move");
         engine.classList.remove("right-move");
     }
     else {
-        engine.style.animationPlayState = "paused"
-        startPoint = getComputedStyle(engine).left;
-        console.log(`startPoint = ${startPoint}`);
-        // startPoint = `${engineCoords.left}px`;
+        engine.style.animationPlayState = "paused";
     }
 });
 
+// Нажатие кнопки "Вправо" мышкой
+right.addEventListener("click", () => {
+    if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
+        engine.style.animationPlayState = "running";
+        engine.classList.remove("left-move");
+        engine.classList.add("right-move");
+    }
+    else if(engine.style.animationPlayState = "running" && engine.className === "engine left-move") {
+        engine.style.left = getComputedStyle(engine).left;
+        engine.style.animationDuration = `${(windWidth - Number(getComputedStyle(engine).left.slice(0, -2))) / animSpeed}s`;
+        // engine.style.animationDuration = `${(Number(getComputedStyle(engine).left.slice(0, -2))) / animSpeed}s`;
+        console.log(`speed RIGHTRIGHT = ${(windWidth - Number(getComputedStyle(engine).left.slice(0, -2))) / Number(engine.style.animationDuration.slice(0, -1))}`);
+        engine.classList.add("right-move");
+        engine.classList.remove("left-move");
+    }
+    else {
+        engine.style.animationPlayState = "paused";
+    }
+});
+
+// Нажатие кнопки "Влево" кнопкой
 document.addEventListener("keydown", (event) => {
     if(event.code === "ArrowLeft") {
         if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
             engine.style.animationPlayState = "running";
-            engine.style.left = startPoint;
-            // console.log(`engine.style.left = ${engine.style.left}`);
+            engine.classList.add("left-move");
+            engine.classList.remove("right-move");
+        }
+        else if(engine.style.animationPlayState = "running" && engine.className === "engine right-move") {
+            engine.style.left = getComputedStyle(engine).left;
             engine.classList.add("left-move");
             engine.classList.remove("right-move");
         }
         else {
             engine.style.animationPlayState = "paused";
-            startPoint = getComputedStyle(engine).left;
-            // startPoint = `${engineCoords.left}px`;
         }
     }
 }, false);
 
-right.addEventListener("click", () => {
-    if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
-        engine.style.animationPlayState = "running";
-        engine.style.left = startPoint;
-        console.log(`engine.style.left = ${engine.style.left}`);
-        // console.log(engine.style.left);
-        engine.classList.remove("left-move");
-        engine.classList.add("right-move");
-        
-    }
-    else {
-        engine.style.animationPlayState = "paused";
-        startPoint = getComputedStyle(engine).left;
-        console.log(`startPoint = ${startPoint}`);
-        // startPoint = `${engineCoords.left}px`;
-    }
-});
-
+// Нажатие кнопки "Вправо" кнопкой
 document.addEventListener("keydown", (event) => {
     if(event.code === "ArrowRight") {
         if(engine.style.animationPlayState === "paused" || engine.style.animationPlayState === "") {
             engine.style.animationPlayState = "running";
-            // engine.style.left = startPoint;
             engine.classList.remove("left-move");
             engine.classList.add("right-move");
         }
+        else if(engine.style.animationPlayState = "running" && engine.className === "engine left-move") {
+            engine.style.left = getComputedStyle(engine).left;
+            engine.classList.add("right-move");
+            engine.classList.remove("left-move");
+        }
         else {
-            engine.style.animationPlayState = "paused"
-            // startPoint = `${engineCoords.left}px`;
+            engine.style.animationPlayState = "paused";
         }
     }
 });
 
+// Нажатие кнопки "Вкл/Выкл" фонарика мышкой
 document.addEventListener("keydown", (event) => {
     if(event.code === "KeyF") {
         if(lamp.style.backgroundColor === "grey" || lamp.style.backgroundColor === "") {
@@ -95,6 +108,7 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
+// Нажатие кнопки "Вкл/Выкл" фонарика кнопкой "F"
 fbtn.addEventListener("click", (event) => {
     if(lamp.style.backgroundColor === "grey" || lamp.style.backgroundColor === "") {
         lamp.style.backgroundColor = "yellow";
@@ -106,6 +120,8 @@ fbtn.addEventListener("click", (event) => {
     }
 });
 
+
+// Не удачные вариант, код оставил дя себя
 // //Вариант 2 - setInterval
 // let actCount = 0;
 // let move = null;
