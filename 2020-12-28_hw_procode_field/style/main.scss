@@ -1,0 +1,22 @@
+.field, .arrows, .message {
+    margin: 100px auto;
+}
+
+.field {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.arrows {
+    width: 4em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.btn {
+    margin: 5px;
+}
+
+.message {
+    width: 13em;
+}
