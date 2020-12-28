@@ -33,7 +33,7 @@ const runTimer = () => {
                 checker = 0;
                 clearTimeout(timerCount);
                 timer.innerHTML = "00:00:00";
-                enterTime.value = "";
+                // enterTime.value = "";
                 btn.disabled = true;
                 pseudElAtrr.innerHTML = ".timer:after {animation-play-state: paused;} .btn::before {content: '\\e802';}";
                 enterTime.removeAttribute('readonly');
