@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../fontello/font/fontello.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    width: 243px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.timer {
+    position: relative;
+    width: 220px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 50px;
+    border: 1px solid black;
+}
+
+.timer::after {
+    content: '\e832';
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    font-size: 36px;
+    font-family: "fontello";
+    animation: spin 2s infinite linear;
+}
+
+#enter-time {
+    border: 1px solid black;
+}
+
+button {
+    position: relative;
+    height: 20px;
+    width: 158px;
+    margin-left: 10px;
+    font-family: "fontello";
+    font-size: 15px;
+    border: 1px solid black;
+    background-color: #ffffff;
+}
+
+button::before {
+    content: '\e802';
+    font-family: "fontello";
+}
