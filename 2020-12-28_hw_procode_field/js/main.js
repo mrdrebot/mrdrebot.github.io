@@ -5,11 +5,7 @@
 3) напиши функцию подсчета ненулевых(непустых) клеток во всём массиве;
 4) отобрази на странице игровое поле(клетки массива) и строку статуса, в которой будет написано количество ненулевых клеток. Нулевые клетки закрашены белым цветом (render);
 5) покажи на странице 4 html кнопки-стрелки: "вверх", "вниз", "влево", "вправо";
-6) сделай управление мышкой и клавиатурой, там где находится курсор (курсор- это любая клетка поля), закрашиваем клетку синим цветом;
-7) на игровом поле сделать отображение следа на клетках после курсора оранжевым цветом. В соответствующих ячейках массива где след писать "2". След весь от начала игры;
-8) сделай отключение соответствующих кнопок управления, если курсор с краю поля или наступает на свой след;
-9) сделай обработку ситуации GAME OVER, когда нет куда ходить, отобразить на странице надпись GAME OVER;
-10) добавь таймер на 10 секунд, если не сделал ход, GAME OVER.
+6) сделай управление мышкой и клавиатурой, там где находится курсор (курсор- это любая клетка поля), закрашиваем клетку синим цветом.
 Первоначальное положение курсора в левом верхнем углу. В массиве, в соответствующую ячейку писать "1". Уход с клетки возвращает значение null;
 */
 
@@ -17,27 +13,22 @@ let arr = [];
 arr.length = 5;
 let coordX = 0;                                         //  Начальное положение синей ячейки, ось х
 let coordY = 0;                                         //  Начальное положение синей ячейки, ось у
-let coordXPrev = null;                                  //  Предыдущее положение  положение синей ячейки, ось х
-let coordYPrev = null;
 let cellHeight = 50;
 let cellWidth = 50;
 let celBordThick = 1;                                    //  Толщина рамки ячеек
-let moveCellColor = "blue";
-let prevCellColor = "orange";
+let notNullCellColor = "blue";
 let field = document.querySelector(".field");
+// console.log(window.document.width);
+console.dir(window);
+console.log(document.body.clientWidth);
 
-field.style.height = `${cellHeight * arr.length}px`;
-field.style.width = `${cellWidth * arr.length}px`;
-field.style.boxSizing = "border-box";
+
+field.style.height = `${(cellHeight + 2 * celBordThick) * arr.length}px`;
+field.style.width = `${(cellWidth + 2 * celBordThick) * arr.length}px`;
 
 let allCell;                                             //  Массив ячеек поля
 let message = document.querySelector(".message");
 let arrows = document.querySelector(".arrows");
-let arrowUp = document.querySelector(".btn.up");
-let arrowLeft = document.querySelector(".btn.left");
-let arrowRight = document.querySelector(".btn.right");
-let arrowDown = document.querySelector(".btn.down");
-console.dir(arrowUp);
 
 //  Функция создания массива (квадратной матрицы)
 const createMatrix = (x, y) => {
@@ -50,19 +41,8 @@ const createMatrix = (x, y) => {
     }
 }
 
-//  Функция обновления массива (квадратной матрицы)
-const updateMatrix = (x1, y1, x2, y2) => {
-    for(let i = 0; i < arr.length; i++) {
-        for(let j = 0; j < arr.length; j++) {
-            if(i === y1 && j === x1) arr[i][j] = 1;
-
-            if(i === y2 && j === x2) arr[i][j] = 2;
-        }
-    }
-}
-
 //  Функция создания и наполнение html-кодом поля
-const renderField = () => {
+const createField = () => {
     let count = 0;
     let indX = null;
     let indY = null;
@@ -77,13 +57,9 @@ const renderField = () => {
             
             indX++;
 
-            if(secondInd === 1) {
+            if(secondInd) {
                 count++;
-                field.innerHTML += `<div class="indX${indX} indY${indY} ${moveCellColor}"></div>`;
-            }
-            else if(secondInd === 2) {
-                count++;
-                field.innerHTML += `<div class="indX${indX} indY${indY} ${prevCellColor}"></div>`;
+                field.innerHTML += `<div class="indX${indX} indY${indY} ${notNullCellColor}"></div>`;
             }
             else {
                 field.innerHTML += `<div class="indX${indX} indY${indY}"></div>`;
@@ -102,157 +78,84 @@ const colour = () => {
         elem.style.height = `${cellHeight}px`;
         elem.style.width = `${cellWidth}px`;
         elem.style.border = `${celBordThick}px solid black`;
-        elem.style.boxSizing = "inherit";
 
-        if(elem.classList.contains(`${moveCellColor}`)) {
-            elem.style.backgroundColor = `${moveCellColor}`;
-        }
-        else if(elem.classList.contains(`${prevCellColor}`)) {
-            elem.style.backgroundColor = `${prevCellColor}`;
+        if(elem.classList.contains(`${notNullCellColor}`)) {
+            elem.style.backgroundColor = `${notNullCellColor}`;
         }
     })
 }
 
-//  Функция вызова трех функций "updateMatrix", "renderField" и "colour"
-const updateField = (a1, b1, a2, b2) => {
-    updateMatrix(a1, b1, a2, b2);
-    renderField();
+//  Функция вызова трех функций "createMatrix", "createField" и "colour"
+const updateField = (a, b) => {
+    createMatrix(a, b);
+    createField();
     colour();
 }
 
-//  Функция блокировки кнопок перемещения
-const btnBlock = (x, y) => {
-
-    if(y - 1 < 0) {
-        arrowUp.disabled = true;
-    }
-    else {
-        if(arr[y - 1][x] === 2) {
-            arrowUp.disabled = true;
-        }
-        else {
-            arrowUp.disabled = false;
-        }
-    }
-
-    if(x - 1 < 0) {
-        arrowLeft.disabled = true;
-    }
-    else {
-        if(arr[y][x - 1] === 2) {
-            arrowLeft.disabled = true;
-        }
-        else {
-            arrowLeft.disabled = false;
-        }
-    }
-
-    if(x + 1 > arr.length - 1) {
-        arrowRight.disabled = true;
-    }
-    else {
-        if(arr[y][x + 1] === 2) {
-            arrowRight.disabled = true;
-        }
-        else {
-            arrowRight.disabled = false;
-        }
-    }
-
-    if(y + 1 > arr.length - 1) {
-        arrowDown.disabled = true;
-    }
-    else {
-        if(arr[y + 1][x] === 2) {
-            arrowDown.disabled = true;
-        }
-        else {
-            arrowDown.disabled = false;
-        }
-    }
-}
-
 //  Создание начального состояния поля
-createMatrix(coordX, coordY);
-renderField();
-colour();
-btnBlock(coordX, coordY);
+updateField(coordX, coordY);
+
+//  Изменение положения ячейки кликом мышки по полю (в задании нет)
+field.addEventListener ("click", (event) => {
+    coordX = Number(event.target.className.slice(4,5)) - 1;
+    coordY = Number(event.target.className.slice(10,11)) - 1;
+    updateField(coordX, coordY);
+});
 
 //  Обработчик нажатия кнопок на экране, движение синей ячейки
 arrows.addEventListener ("click", (event) => {
-    coordXPrev = coordX;
-    coordYPrev = coordY;
-
-    btnBlock(coordXPrev, coordYPrev);
-
     if(event.target.classList.contains("up")) {
         if(coordY - 1 >= 0) {
             coordY = coordY - 1;
-            updateField(coordX, coordY, coordXPrev, coordYPrev);
+            updateField(coordX, coordY);
         }
     }
     else if(event.target.classList.contains("left")) {
         if(coordX - 1 >= 0) {
             coordX = coordX - 1;
-            updateField(coordX, coordY, coordXPrev, coordYPrev);
+            updateField(coordX, coordY);
         }
     }
     else if(event.target.classList.contains("right")) {
         if(coordX + 1 < arr.length) {
             coordX = coordX + 1;
-            updateField(coordX, coordY, coordXPrev, coordYPrev);
+            updateField(coordX, coordY);
         }
     }
-    else if(event.target.classList.contains("down")){
+    else {
         if(coordY + 1 < arr.length) {
             coordY = coordY + 1;
-            updateField(coordX, coordY, coordXPrev, coordYPrev);
+            updateField(coordX, coordY);
         }
     }
 
-    btnBlock(coordX, coordY);
 });
 
 //  Обработчик нажатия кнопок на клавиатуре, движение синей ячейки
 document.addEventListener ("keydown", (event) => {
-    coordXPrev = coordX;
-    coordYPrev = coordY;
-
-    btnBlock(coordXPrev, coordYPrev);
-
     switch(event.code){
         case "ArrowUp":
-            if(!arrowUp.disabled) {
-                if(coordY - 1 >= 0) {
-                    coordY = coordY - 1;
-                    updateField(coordX, coordY, coordXPrev, coordYPrev);
-                }
+            if(coordY - 1 >= 0) {
+                coordY = coordY - 1;
+                updateField(coordX, coordY);
             }
             break;
         case "ArrowLeft":
-            if(!arrowLeft.disabled) {
-                if(coordX - 1 >= 0) {
-                    coordX = coordX - 1;
-                    updateField(coordX, coordY, coordXPrev, coordYPrev);
-                }
+            if(coordX - 1 >= 0) {
+                coordX = coordX - 1;
+                updateField(coordX, coordY);
             }
             break;
         case "ArrowRight":
-            if(!arrowRight.disabled) {
-                if(coordX + 1 < arr.length) {
-                    coordX = coordX + 1;
-                    updateField(coordX, coordY, coordXPrev, coordYPrev);
-                }
+            if(coordX + 1 < arr.length) {
+                coordX = coordX + 1;
+                updateField(coordX, coordY);
             }
             break;
         case "ArrowDown":
-            if(!arrowDown.disabled) {
-                if(coordY + 1 < arr.length) {
-                    coordY = coordY + 1;
-                    updateField(coordX, coordY, coordXPrev, coordYPrev);
-                }
+            if(coordY + 1 < arr.length) {
+                coordY = coordY + 1;
+                updateField(coordX, coordY);
             }
     }
-
-    btnBlock(coordX, coordY);
 });

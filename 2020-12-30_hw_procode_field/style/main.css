@@ -1,0 +1,42 @@
+.field, .arrows, .message, .game-over {
+  margin: 100px auto;
+}
+
+.field {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.arrows {
+  width: 8em;
+  margin-top: 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+.btn {
+  height: 42px;
+  width: 48px;
+  margin: 5px;
+}
+
+.message {
+  width: 13em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.game-over {
+  position: absolute;
+  margin-top: 0;
+  background-color: transparent;
+  font-size: 6.5em;
+  text-align: center;
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */
