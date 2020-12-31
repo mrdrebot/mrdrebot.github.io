@@ -38,6 +38,7 @@ let arrowUp = document.querySelector(".btn.up");
 let arrowLeft = document.querySelector(".btn.left");
 let arrowRight = document.querySelector(".btn.right");
 let arrowDown = document.querySelector(".btn.down");
+let gameOverTimer;
 
 //  Функция создания массива (квадратной матрицы)
 const createMatrix = (x, y) => {
@@ -67,6 +68,7 @@ const renderField = () => {
     let indX = null;
     let indY = null;
 
+    // Обнуление поля
     field.innerHTML = "";
     message.innerHTML = "";
 
@@ -177,15 +179,21 @@ createMatrix(coordX, coordY);
 renderField();
 colour();
 btnBlock(coordX, coordY);
+gameOverTimer = setTimeout(() => {
+    btns.forEach(arrow => arrow.disabled = true);
+    field.innerHTML += "<div class=\"game-over\">Game over!</div>";
 
-//  Обработчик нажатия кнопок на экране, движение синей ячейки
+}, 10000);
+
+//  Обработчик нажатия кнопок на экране
 arrows.addEventListener ("click", (event) => {
-    
+    //  Сброс таймера окончания игры
+    clearTimeout(gameOverTimer);                    
+    //  Входящие координаты
     coordXPrev = coordX;
     coordYPrev = coordY;
     
-    btnBlock(coordXPrev, coordYPrev);
-    
+    //  Перемещение синей ячейки
     if(event.target.classList.contains("up")) {
         if(coordY - 1 >= 0) {
             coordY = coordY - 1;
@@ -213,21 +221,25 @@ arrows.addEventListener ("click", (event) => {
     
     btnBlock(coordX, coordY);
 
-    //  Проверка возможности перемещения ячейки 
+    //  Проверка возможности продолжения игры 
     if(btns.every(arrow => arrow.disabled === true)) {
         field.innerHTML += "<div class=\"game-over\">Game over!</div>";
     }
+
+    gameOverTimer = setTimeout(() => {
+        btns.forEach(arrow => arrow.disabled = true);
+        field.innerHTML += "<div class=\"game-over\">Game over!</div>";
+
+    }, 10000);
 });
 
 //  Обработчик нажатия кнопок на клавиатуре, движение синей ячейки
 document.addEventListener ("keydown", (event) => {
-
-        
-        coordXPrev = coordX;
-        coordYPrev = coordY;
-        
-        btnBlock(coordXPrev, coordYPrev);
-        
+    clearTimeout(gameOverTimer);
+    coordXPrev = coordX;
+    coordYPrev = coordY;
+    
+    //  Перемещение ячейки по полю
     switch(event.code){
         case "ArrowUp":
             if(!arrowUp.disabled) {
@@ -264,7 +276,14 @@ document.addEventListener ("keydown", (event) => {
 
     btnBlock(coordX, coordY);
 
+    //  Проверка возможности продолжения игры 
     if(btns.every(arrow => arrow.disabled === true)) {
         field.innerHTML += "<div class=\"game-over\">Game over!</div>";
     }
+
+    gameOverTimer = setTimeout(() => {
+        btns.forEach(arrow => arrow.disabled = true);
+        field.innerHTML += "<div class=\"game-over\">Game over!</div>";
+
+    }, 10000);
 });
