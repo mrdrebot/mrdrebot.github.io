@@ -1,0 +1,51 @@
+.traffic-lights, .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 200px auto;
+    margin-bottom: 20px;
+}
+
+.traffic-lights {
+    height: 150px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.buttons {
+    flex-wrap: nowrap;
+    height: 50px;
+    width: 150px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.traffic-lights > div {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.red, .yellow, .green {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
