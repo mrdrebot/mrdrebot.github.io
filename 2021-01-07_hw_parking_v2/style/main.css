@@ -1,0 +1,78 @@
+body {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.info-board {
+  height: 1.2rem;
+  text-align: center;
+}
+
+.info-board > div {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.main, .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.main {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: khaki;
+}
+
+.center {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.busy {
+  background-color: red;
+}
+
+.car-in {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(127, 127, 127, 0.9);
+}
+
+.car-in-on {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.from-time {
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */

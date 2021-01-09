@@ -1,0 +1,61 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.parking, .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.parking {
+    flex-wrap: wrap;
+    background-color: khaki;
+}
+
+.center {
+    flex-direction: column;
+    text-align: center;
+}
+
+.info-board {
+    height: 1.2rem;
+    text-align: center;
+    background-color: lightcoral;
+}
+
+.busy {
+    background-color: red;
+}
+
+#modal-window {
+    position: absolute;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(127,127,127, 0.9);
+}
+
+.container {
+    position: absolute;
+    // display: flex;
+    // --inputAreaWidth: auto;
+    // top: calc(50% - var(--inputAreaHeigth) / 2);
+    // left: calc(50% - var(--inputAreaWidth) / 2);
+    // top: 50%;
+    // left: 50%;
+    text-align: center;
+}
+
+#parking-time {
+    --inputAreaHeigth: 2rem;
+    --inputAreaWidth: 10rem;
+    // top: calc(50% - var(--inputAreaHeigth) / 2);
+    // left: calc(50% - var(--inputAreaWidth) / 2);
+    height: var(--inputAreaHeigth);
+    width: var(--inputAreaWidth);
+    font-size: var(--inputAreaHeigth);
+    text-align: center;
+}
