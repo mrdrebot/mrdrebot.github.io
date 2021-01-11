@@ -168,10 +168,13 @@ mainEl.addEventListener("click", (clickEvent) => {
         occuTime.innerHTML = moment(stopParTime - startParTime).utc().format("HH:mm");
         stopParking.style.display = "flex";
 
-        freeParkingPlace.addEventListener("click", () => {
+        const clickBtnYes = () => {
             changePlaceParam(placeId, "busy", "free", false);
             stopParking.style.display = "none";
-        });
+            freeParkingPlace.removeEventListener("click", clickBtnYes);
+        }
+
+        freeParkingPlace.addEventListener("click", clickBtnYes);
     
         noFreeParkingPlace.addEventListener("click", () => {
             stopParking.style.display = "none";
