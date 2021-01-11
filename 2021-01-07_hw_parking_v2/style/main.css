@@ -1,12 +1,10 @@
 body {
   height: 100%;
-  width: 100%;
   text-align: center;
 }
 
 .info-board {
   height: 1.2rem;
-  text-align: center;
 }
 
 .info-board > div {
@@ -29,35 +27,29 @@ body {
 }
 
 .main {
+  height: calc(100vh - 1.2em);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: khaki;
 }
 
-.center {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+.place {
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.free {
+  background-color: green;
 }
 
 .busy {
   background-color: red;
 }
 
-.car-in {
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(127, 127, 127, 0.9);
-}
-
-.car-in-on {
+.car-in, .car-out {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -70,9 +62,26 @@ body {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(127, 127, 127, 0.9);
 }
 
-.from-time {
+.modal-window {
+  height: 8em;
+  width: 13em;
+  border-radius: 3px;
+  background-color: turquoise;
+}
+
+.from-time, .message {
+  margin: 1em auto;
   text-align: center;
+}
+
+.alert, .occu-time {
+  margin-top: 5px;
+  color: red;
+  font-weight: 600;
 }
 /*# sourceMappingURL=main.css.map */
