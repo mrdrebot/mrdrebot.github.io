@@ -12,7 +12,7 @@ let occupiedSpaces = document.querySelector(".occupied-spaces");
 let curTime = document.querySelector(".current-time");
 let mainEl = document.querySelector(".main");
 let parkingPlacesArr;             // Создание массива парковочных мест
-let parFillFact = 0.9;
+let parFillFact = 0.2;
 
 //  Создание объектов со свойствами в массиве и добавление их в html-разметку
 const createPlaces = () => {
