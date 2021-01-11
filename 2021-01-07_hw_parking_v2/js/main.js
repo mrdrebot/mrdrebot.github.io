@@ -92,8 +92,8 @@ const renderParkPlaces = () => {
 }
 
 //  Изменение параметров парковочного места
-const changePlaceParam = (i, str1, str2) => {
-    parkingArr[i].occupied = true;
+const changePlaceParam = (i, str1, str2, boolVal) => {
+    parkingArr[i].occupied = boolVal;
     (str1 === "free") ? parkingArr[i].time = parkingTime.value : parkingArr[i].time = "--:--";
     parkingPlacesArr[i].classList.remove(str1);
     parkingPlacesArr[i].classList.add(str2);
@@ -149,7 +149,7 @@ mainEl.addEventListener("click", (clickEvent) => {
         startParking.style.display = "flex";
         
         const clickBtnOk = () => {
-            changePlaceParam(placeId, "free", "busy");
+            changePlaceParam(placeId, "free", "busy", true);
             startParking.style.display = "none";
             setTimeParking.removeEventListener("click", clickBtnOk);
         }
@@ -169,7 +169,7 @@ mainEl.addEventListener("click", (clickEvent) => {
         stopParking.style.display = "flex";
 
         freeParkingPlace.addEventListener("click", () => {
-            changePlaceParam(placeId, "busy", "free");
+            changePlaceParam(placeId, "busy", "free", false);
             stopParking.style.display = "none";
         });
     
