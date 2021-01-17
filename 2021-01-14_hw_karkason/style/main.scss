@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(93, 163, 93);
+}
+
+.main {
+    display: flex;
+    margin: 10vh auto;
+}
+
+.container {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.deck {
+    min-height: 62px;
+    min-width: 62px;
+    background-size: 100%;
+}
+
+.number-cards-deck {
+    font-size: 2em;
+}
+
+.field {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 2px;
+    background-color: white;
+}
+
+.cell {
+    min-height: 62px;
+    min-width: 62px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-size: 100%;
+}
